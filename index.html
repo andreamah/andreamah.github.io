@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="http://i122.photobucket.com/albums/o260/mhilka/minigifs/balaozinho38.gif">
+		<title>.profile</title>
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+        <style type="text/css" ></style>
+		
+
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+		<script>
+			$(document).ready(function(){
+                    var open = true;
+                $("#seeMore1").click(function() {
+
+                    if (open)
+                        {
+                            setTimeout(function(){$(".lineOut1").animate({"width": 51}, 200)}, 675);
+                            setTimeout( function(){$(".lineOut2").animate({"height": 33}, 200)},450);
+                            setTimeout( function(){$(".lineOut3").animate({"width": 65}, 200)},225);
+
+                            $(".flipflop").animate({"width": 220}, 200);
+                            $(".flipflop").animate({"borderRightWidth": 1}, 100);
+                            $(".flipflop").animate({"borderLeftWidth": 1}, 50);
+                            open = false;
+                        }
+                     else
+                        {
+                            $(".lineOut1").animate({"width":0}, 200)
+                            setTimeout( function(){$(".lineOut2").animate({"height":0}, 200)},225);
+                            setTimeout(function(){$(".lineOut3").animate({"width":0}, 200)},500);
+
+                            setTimeout(function(){$(".flipflop").animate({"width":0}, 200)},775);
+
+                            setTimeout(function(){$(".flipflop").animate({"borderRightWidth": 0}, 50)},775);
+                            setTimeout( function(){$(".flipflop").animate({"borderLeftWidth":0}, 100)},775);
+                            open = true;
+                        }
+                    
+                    
+                });
+            });
+		</script>
+	</head>
+
+	<body>
+	<!-- -->
+        
+        <div id="firstLine"></div>
+        <div id="name">
+            <div id="nameBlock">
+                <div id="myNameIs"><div id ="arrowMyName">»</div>my name is: </div>
+                <div id="firstNameSquare"><h1>Andrea</h1></div>
+                <div id="lastNameSquare"><h1>Mah</h1></div>
+            </div>
+            <div id="underName">
+                <div id="and">and</div>
+                <div id="secondLine"></div>
+                 <div id="Iam"><div style="width:83px">I am...</div></div>
+                <div id="secondLineExtension"></div>
+                <div id="pointLine">
+                    <div class="axle"><div class="pointLineFirst"></div></div>
+                    <div id="circles">
+                        <div id="point1"><p>✕</p><div class="pointLineInner"></div></div>
+                        <div id="point2"><p>✕</p><div class="pointLineInner"></div></div>
+                        <div id="point3"><p>✕</p><div class="pointLineInner"></div></div>
+                    </div>
+                    <div id="bubbles">
+                        <div class="bubble1"><div id= "bubbleText1" style="width:394px">A second-year <i>Computer Engineering</i> student studying at the <i>University of British Columbia</i> (UBC)</div><div id="seeMore1"><div width="169px">  click here to read more  </div></div></div>
+                        
+                        <div class="bubble2"><div id= "bubbleText2" style="width:462px">A programming enthusiast, who has experience working with <i>Java</i>, <i>C++</i>, <i>JavaScript</i>, <i>HTML</i>, <i >CSS</i>, <i>ARM Assembly</i>,and <i>Verilog</i></div><div id="seeMore2"><div width="169px">  click here to read more  </div></div></div>
+                        
+                        <div class="bubble3" ><div id= "bubbleText3" style="width:327px">A <i>problem-solver</i> who <i>welcomes challenges</i> and is <i>eager to learn new concepts</i></div><div id="seeMore3"><div width="169px">  click here to read more  </div></div></div>
+                    </div>
+                    <div id="firstPageMore">
+                        <div id="firstMore">
+                            <div class="flipflop"></div>
+                            <div class="lineOut1"></div>
+                            <div class="lineOut2"></div>
+                            <div class="lineOut3"></div>
+                        </div>
+                        
+                        <div id="secondMore">
+                            <div class="flipflop2"></div>
+                            <div class="lineOut12"></div>
+                            <div class="lineOut22"></div>
+                            <div class="lineOut32"></div>
+                        </div>
+                        
+                        <div id="thirdMore">
+                            <div class="flipflop3"></div>
+                            <div class="lineOut13"></div>
+                            <div class="lineOut23"></div>
+                            <div class="lineOut33"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+	   </div>
+	</body>
+</html>
