@@ -15,23 +15,18 @@
 	
 		<script>
 			$(document).ready(function(){
-                    var open = true;
+                 
+                
+                    var open1 = false;
+                    var open2 = false;
+                    var open3 = false;
                 $("#seeMore1").click(function() {
 
-                    if (open)
+                    //if open, close
+                    if (open1)
                         {
-                            setTimeout(function(){$(".lineOut1").animate({"width": 51}, 200)}, 675);
-                            setTimeout( function(){$(".lineOut2").animate({"height": 33}, 200)},450);
-                            setTimeout( function(){$(".lineOut3").animate({"width": 65}, 200)},225);
-
-                            $(".flipflop").animate({"width": 220}, 200);
-                            $(".flipflop").animate({"borderRightWidth": 1}, 100);
-                            $(".flipflop").animate({"borderLeftWidth": 1}, 50);
-                            open = false;
-                        }
-                     else
-                        {
-                            $(".lineOut1").animate({"width":0}, 200)
+                            
+                            $(".lineOut1").animate({"width":0}, 200);
                             setTimeout( function(){$(".lineOut2").animate({"height":0}, 200)},225);
                             setTimeout(function(){$(".lineOut3").animate({"width":0}, 200)},500);
 
@@ -39,69 +34,691 @@
 
                             setTimeout(function(){$(".flipflop").animate({"borderRightWidth": 0}, 50)},775);
                             setTimeout( function(){$(".flipflop").animate({"borderLeftWidth":0}, 100)},775);
-                            open = true;
+                            setTimeout( function(){$(".flipflop").animate({"paddingRight":0}, 100)},775);
+                            setTimeout( function(){$(".quote1").animate({"opacity":0}, 100)},775);
+                            open1 = false;
+                        }
+                    //if closed, open
+                     else
+                        {
+                            setTimeout(function(){$(".lineOut1").animate({"width": 51}, 200)}, 675);
+                            setTimeout( function(){$(".lineOut2").animate({"height": 33}, 200)},450);
+                            setTimeout( function(){$(".lineOut3").animate({"width": 65}, 200)},225);
+
+                            $(".flipflop").animate({"width": 250}, 200);
+                            $(".flipflop").animate({"borderRightWidth": 1}, 100);
+                            $(".flipflop").animate({"borderLeftWidth": 1}, 50);
+                            $(".flipflop").animate({"paddingRight": 10}, 50);
+                            $(".quote1").animate({"opacity": 1}, 50);
+                            open1 = true;
                         }
                     
+                   
+                });
+                
+                $("#seeMore2").click(function() {
+
+                    //if open, close
+                    if (open2)
+                        {
+                            
+                            $(".lineOut12").animate({"width":0}, 200);
+                            setTimeout( function(){$(".lineOut22").animate({"height":0}, 200)},225);
+                            setTimeout(function(){$(".lineOut32").animate({"width":0}, 200)},500);
+
+                            setTimeout(function(){$(".flipflop2").animate({"width":0}, 200)},775);
+
+                            setTimeout(function(){$(".flipflop2").animate({"borderRightWidth": 0}, 50)},775);
+                            setTimeout( function(){$(".flipflop2").animate({"borderLeftWidth":0}, 100)},775);
+                            setTimeout( function(){$(".flipflop2").animate({"paddingRight":0}, 100)},775);
+                            setTimeout( function(){$(".quote2").animate({"opacity":0}, 100)},775);
+                            open2 = false;
+                        }
+                    //if closed, open
+                     else
+                        {
+                            setTimeout(function(){$(".lineOut12").animate({"width": 88}, 200)}, 675);
+                            setTimeout( function(){$(".lineOut22").animate({"height": 14}, 200)},450);
+                            setTimeout( function(){$(".lineOut32").animate({"width": 30}, 200)},225);
+
+                            $(".flipflop2").animate({"width": 250}, 200);
+                            $(".flipflop2").animate({"borderRightWidth": 1}, 100);
+                            $(".flipflop2").animate({"borderLeftWidth": 1}, 50);
+                            $(".flipflop2").animate({"paddingRight": 10}, 50);
+                            $(".quote2").animate({"opacity": 1}, 50);
+                            open2 = true;
+                            //add features to close others 
+                        }
+                    
+                   
+                });
+                
+                 $("#seeMore3").click(function() {
+
+                    //if open, close
+                    if (open3)
+                        {
+                            
+                            $(".lineOut13").animate({"width":0}, 200);
+                            setTimeout( function(){$(".lineOut23").animate({"height":0}, 200)},225);
+                            setTimeout(function(){$(".lineOut33").animate({"width":0}, 200)},500);
+
+                            setTimeout(function(){$(".flipflop3").animate({"width":0}, 200)},775);
+                            setTimeout(function(){$(".flipflop3").animate({"borderRightWidth": 0}, 50)},775);
+                            setTimeout( function(){$(".flipflop3").animate({"borderLeftWidth":0}, 100)},775);
+                            setTimeout( function(){$(".flipflop3").animate({"paddingRight":0}, 100)},775);
+                            setTimeout( function(){$(".flipflop3").animate({"paddingRight":0}, 100)},775);
+                            setTimeout( function(){$(".quote3").animate({"opacity":0}, 100)},775);
+                            open3 = false;
+                        }
+                    //if closed, open
+                     else
+                        {
+                            setTimeout(function(){$(".lineOut13").animate({"width": 31}, 200)}, 675);
+                            setTimeout( function(){$(".lineOut23").animate({"height": 21}, 200)},450);
+                            setTimeout( function(){$(".lineOut33").animate({"width": 86}, 200)},225);
+
+                            $(".flipflop3").animate({"width": 250}, 200);
+                            $(".flipflop3").animate({"borderRightWidth": 1}, 100);
+                            $(".flipflop3").animate({"borderLeftWidth": 1}, 50);
+                            $(".flipflop3").animate({"paddingRight": 10}, 50);
+                            $(".flipflop3").animate({"paddingRight": 10}, 50);
+                            $(".quote3").animate({"opacity": 1}, 50);
+                            open3 = true;
+                            //add features to close others 
+                        }
+                    
+                   
+                });
+                
+                $(".change1").click(function(){
+                     
+                            $(".movDot").animate({"top": 275,"left": 845}, 700);
+                            $("#slidePos").animate({"marginTop": 0}, 700);
+                });
+                $(".change2").click(function(){
+                     
+                            $(".movDot").animate({"top": 367,"left": 918}, 700);
+                            $("#slidePos").animate({"marginTop": -400}, 700);
+                });
+                $(".change3").click(function(){
+                     
+                            $(".movDot").animate({"top": 452,"left": 987}, 700);
+                            $("#slidePos").animate({"marginTop": -800}, 700);
                     
                 });
+                $(".change4").click(function(){
+                     
+                            $(".movDot").animate({"top": 542,"left": 1059}, 700);
+                            $("#slidePos").animate({"marginTop": -1200}, 700);
+                    
+                });
+                //https://stackoverflow.com/questions/19365386/jquery-change-button-text-on-click
+                $('#HDBApp').click(function(){
+                    
+                    $(this).closeAllBut(); 
+                    $('#projectTitle').text('HDBConverter');   
+                        
+                });
+                
+                $('#DB').click(function(){
+                    $(this).closeAllBut(); 
+                    $('#projectTitle').text('YelpDatabase');
+                });
+                
+                $('#TaxCalc').click(function(){
+                    $(this).closeAllBut(); 
+                    $('#projectTitle').text('TaxCalculator');
+                });
+                
+                $('#Cryp').click(function(){
+                    $(this).closeAllBut(); 
+                    $('#projectTitle').text('Cryptarithms');
+                });
+                
+                $('#CSSName').click(function(){
+                    $(this).closeAllBut();
+                    $('#projectTitle').text('CSSMyName');
+                });
+                
+                 $('#FAQSite').click(function(){
+                    $(this).closeAllBut(); 
+                    $('#projectTitle').text('FAQSite');
+                });
+                
+                $('#MultGame').click(function(){
+                    $(this).closeAllBut();   
+                    $('#projectTitle').text('MultGame');
+                });
+                
+                $('#MM').click(function(){
+                    $(this).closeAllBut();   
+                    $('#projectTitle').text('MeeTMinus');
+                });
+                
+                $('#RM').click(function(){
+                    $(this).closeAllBut();   
+                    $('#projectTitle').text('RISCMachine');
+                });
+                
+                (function( $ ){
+                   $.fn.closeAllBut = function() {
+                       $('.introWrap').animate({"height": 0}, 200);
+                       $('.introWrap').animate({"marginTop": 0}, 100);
+                       if (!$(this).is($('#MultGame')))
+                           { 
+                               $('#MultGame').animate({"opacity": 1}, 300);
+                               $('.MultGameDesc').animate({"height": 0}, 300);
+                               
+                               $('.multimage1').animate({"opacity": 0}, 300);
+                               $('.multimage2').animate({"opacity": 0}, 300);
+                               $('.multimage3').animate({"opacity": 0}, 300);
+                           } else {
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.MultGameDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 285}, 300);
+                               
+                               $('.multimage1').animate({"opacity": 1}, 300);
+                               $('.multimage2').animate({"opacity": 1}, 300);
+                               $('.multimage3').animate({"opacity": 1}, 300);
+                           }
+                       
+                       if (!$(this).is($('#FAQSite')))
+                           { 
+                               $('#FAQSite').animate({"opacity": 1}, 300);
+                               $('.FAQSiteDesc').animate({"height": 0}, 300);
+                               $('.faqimage').animate({"opacity": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.FAQSiteDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 340}, 300);
+                               $('.faqimage').animate({"opacity": 1}, 300);
+                           }
+                       if (!$(this).is($('#DB')))
+                           { 
+                               $('#DB').animate({"opacity": 1}, 300);
+                               $('.DBDesc').animate({"height": 0}, 300);
+                               $('.dbPhotos').animate({"opacity": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.DBDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 330}, 300);
+                               $('.dbPhotos').animate({"opacity": 1}, 300);
+                           }
+                       
+                      if (!$(this).is($('#HDBApp')))
+                           { 
+                               $('#HDBApp').animate({"opacity": 1}, 300);
+                               $('.HDBAppDesc').animate({"height": 0}, 300);
+                               $('.binheximage').animate({"opacity": 0}, 300);
+                               
+                               $('.arrow').animate({"opacity": 0}, 300);
+                               
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.HDBAppDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 365}, 300);
+                               $('.binheximage').animate({"opacity": 1}, 300);
+                               $('.arrow').animate({"opacity": 1}, 300);
+                               
+                           }
+                       if (!$(this).is($('#TaxCalc')))
+                           { 
+                               $('#TaxCalc').animate({"opacity": 1}, 300);
+                               $('.TaxCalcDesc').animate({"height": 0}, 300);
+                               $('.taximage').animate({"opacity": 0}, 300);
+                               $('.arrowtwo').animate({"opacity": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.TaxCalcDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 295}, 300);
+                               $('.taximage').animate({"opacity": 1}, 300);
+                               $('.arrowtwo').animate({"opacity": 1}, 300);
+                           }
+                       if (!$(this).is($('#Cryp')))
+                           { 
+                               $('#Cryp').animate({"opacity": 1}, 300);
+                               $('.CrypDesc').animate({"height": 0}, 300);
+                               $('.crypPhotos').animate({"opacity": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.CrypDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 330}, 300);
+                               $('.crypPhotos').animate({"opacity": 1}, 300);
+                           }
+                       if (!$(this).is($('#CSSName')))
+                           { 
+                               $('#CSSName').animate({"opacity": 1}, 300);
+                               $('.CSSNameDesc').animate({"height": 0}, 300);
+                               $('.cssimage').animate({"opacity": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.CSSNameDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 270}, 300);
+                               $('.cssimage').animate({"opacity": 1}, 300);
+                           }
+                       if (!$(this).is($('#RM')))
+                           { 
+                               $('#RM').animate({"opacity": 1}, 300);
+                               $('.RMDesc').animate({"height": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.RMDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 250}, 300);
+                           }
+                       if (!$(this).is($('#MM')))
+                           { 
+                               $('#MM').animate({"opacity": 1}, 300);
+                               $('.MMDesc').animate({"height": 0}, 300);
+                               $('.mmPhotos').animate({"opacity": 0}, 300);
+                           } else {
+                               
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.MMDesc').animate({"height": 450}, 300);
+                               $('#window').animate({"height": 505}, 300);
+                               $('.mmPhotos').animate({"opacity": 1}, 300);
+                           }
+                      return this;
+                   }; 
+                })( jQuery );
+                
+                (function( $ ){
+                   $.fn.closeItem = function() {
+                      $(this).animate({"opacity": 0}, 300);
+                      return this;
+                   }; 
+                })( jQuery );
+                // from Steve on StackOverflow https://stackoverflow.com/questions/6677035/jquery-scroll-to-element
+                $("#scroll1").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#secondPage").offset().top
+                    }, 400);
+                });
+                
+                $("#scroll2").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#thirdPage").offset().top
+                    }, 700);
+                });
+                
+                $("#scroll3").click(function() {
+                    $('html, body').animate({
+                        scrollTop: $("#fourthPage").offset().top
+                    }, 1000);
+                });
+                
+                /*
+                function close(numberSeeMore) {
+                    if(numberSeeMore == 1)
+                    {
+                        $(".lineOut1").animate({"width":0}, 200);
+                        setTimeout( function(){$(".lineOut2").animate({"height":0}, 200)},225);
+                        setTimeout(function(){$(".lineOut3").animate({"width":0}, 200)},500);
+
+                        setTimeout(function(){$(".flipflop").animate({"width":0}, 200)},775);
+
+                        setTimeout(function(){$(".flipflop").animate({"borderRightWidth": 0}, 50)},775);
+                        setTimeout( function(){$(".flipflop").animate({"borderLeftWidth":0}, 100)},775);
+                    }
+                
+                }
+                function open(numberSeeMore) {
+                    if(numberSeeMore == 1)
+                    {
+                        setTimeout(function(){$(".lineOut1").animate({"width": 51}, 200)}, 675);
+                        setTimeout( function(){$(".lineOut2").animate({"height": 33}, 200)},450);
+                        setTimeout( function(){$(".lineOut3").animate({"width": 65}, 200)},225);
+
+                        $(".flipflop").animate({"width": 220}, 200);
+                        $(".flipflop").animate({"borderRightWidth": 1}, 100);
+                        $(".flipflop").animate({"borderLeftWidth": 1}, 50);
+                    }
+                }
+                */
             });
+    
+            
+            
+            
 		</script>
 	</head>
 
 	<body>
 	<!-- -->
-        
-        <div id="firstLine"></div>
-        <div id="name">
-            <div id="nameBlock">
-                <div id="myNameIs"><div id ="arrowMyName">»</div>my name is: </div>
-                <div id="firstNameSquare"><h1>Andrea</h1></div>
-                <div id="lastNameSquare"><h1>Mah</h1></div>
+        <div id="firstPage">
+            <div id="firstLine"></div>
+            <div id="name">
+                <div id="nameBlock">
+                    <div id="myNameIs"><div id ="arrowMyName">»</div>my name is: </div>
+                    <div id="firstNameSquare"><h1>Andrea</h1></div>
+                    <div id="lastNameSquare"><h1>Mah</h1></div>
+                </div>
+                <div id="underName">
+                    <div id="and">and</div>
+                    <div id="secondLine"></div>
+                     <div id="Iam"><div style="width:83px">I am...</div></div>
+                    <div id="secondLineExtension"></div>
+                    <div id="pointLine">
+                        <div class="axle"><div class="pointLineFirst"></div></div>
+                        <div id="circles">
+                            <div id="point1"><p>✕</p><div class="pointLineInner"></div></div>
+                            <div id="point2"><p>✕</p><div class="pointLineInner"></div></div>
+                            <div id="point3"><p>✕</p></div>
+                        </div>
+                        <div id="bubbles">
+                            <div class="bubble1"><div id= "bubbleText1" style="width:394px">A second-year <i>Computer Engineering</i> student studying at the <i>University of British Columbia</i> (UBC)</div><div id="seeMore1"><div width="149px"><a>  click here to expand  </a></div></div></div>
+
+                            <div class="bubble2"><div id= "bubbleText2" style="width:462px">A programming enthusiast, who has experience working with <i>Java</i>, <i>C++</i>, <i>JavaScript</i>, <i>HTML</i>, <i >CSS</i>, <i>ARM Assembly</i>,and <i>Verilog</i></div><div id="seeMore2"><div width="149px"><a>  click here to expand  </a></div></div></div>
+
+                            <div class="bubble3" ><div id= "bubbleText3" style="width:327px">A <i>problem-solver</i> who <i>welcomes challenges</i> and is <i>eager to learn new concepts</i></div><div id="seeMore3"><div width="149px"><a>  click here to expand  </a></div></div></div>
+                        </div>
+                        <div id="firstPageMore">
+                            <div id="firstMore">
+                                <div class="quote1">“</div>
+                                <div class="flipflop"><div class="flipText">I'm an undergraduate at UBC who is currently hard at work to explore my potential. Along the way, I've worked and volunteered too! <br><div style="border-left:1px solid #aae0b4; padding-left:9px;"><a id="scroll1">Click here to learn about <i>my school and work experience.</i></a></div></div></div>
+                                <div class="lineOut1"></div>
+                                <div class="lineOut2"></div>
+                                <div class="lineOut3"></div>
+                            </div>
+
+                            <div id="secondMore">
+                                <div class="quote2">“</div>
+                                <div class="flipflop2"><div class="flipText">As an aspiring Computer Engineer, I'm actively learning how to code on different platforms and interface levels. <br><div style="border-left:1px solid #d0aae0; padding-left:9px;"><a id="scroll2">Click here to see <i>some of my personal projects</i>! </a></div></div></div>
+                                <div class="lineOut12"></div>
+                                <div class="lineOut22"></div>
+                                <div class="lineOut32"></div>
+                            </div>
+
+                            <div id="thirdMore">
+                                <div class="quote3">“</div>
+                                <div class="flipflop3"><div class="flipText">The next step in my journey is to gain hands-on experience in a professional setting. <br><div style="border-left:1px solid #aac8e0; padding-left:9px;"><a id="scroll3">Click here to see <i>where I've been building my professional profile!</i> </a></div></div></div>
+                                <div class="lineOut13"></div>
+                                <div class="lineOut23"></div>
+                                <div class="lineOut33"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div id="secondPage">
+            <div id="title2"><h2 style="
+    background-color:#fff;">Education</h2> <div id="plus">+</div> <h2 style="display:inline-block;padding-left:10px;top:-55px; position:relative;
+                background-color:#fff;">Experience</h2><div id="triAfter"></div></div>
+                <div id="firstPageControls" >
+                <!--
+                <div class="change1">[change 1]</div><div class="change2">[change 2]</div><div class="change3">[change 3]</div>-->
+                </div>
+            
+            
+            <div id="spinner">
+                <!--
+                <div class="change1">change 1</div><div class="change2">change 2</div><div class="change3">change 3</div>
+                <div class="outerCirc"><div class="inDot"></div><div class="ovCirc"><div class="innerCirc"></div></div></div>
+                <div class="point"></div>
+                
+                <div id="stick1"><div class="dot1"></div><div class="dot2"></div></div>
+                
+                <div id="stick2"><div class="dot1"></div><div class="dot2"></div></div>
+                <div id="stick3"><div class="dot1"></div><div class="dot2"></div></div>
+                <div id="stick4"><div class="dot1"></div><div class="dot2"></div></div>
+               
+                </div>
+                 -->
             </div>
-            <div id="underName">
-                <div id="and">and</div>
-                <div id="secondLine"></div>
-                 <div id="Iam"><div style="width:83px">I am...</div></div>
-                <div id="secondLineExtension"></div>
-                <div id="pointLine">
-                    <div class="axle"><div class="pointLineFirst"></div></div>
-                    <div id="circles">
-                        <div id="point1"><p>✕</p><div class="pointLineInner"></div></div>
-                        <div id="point2"><p>✕</p><div class="pointLineInner"></div></div>
-                        <div id="point3"><p>✕</p><div class="pointLineInner"></div></div>
+            <div id="infobox">
+                <div id="slidePos">
+                <div id="slide1">
+                    <h2>Job Experience</h2>
+                    <h3>Technical Work Experience</h3>
+                   
+                    <div id="titleItem1">SaskTel</div>
+                   <div id="titleItem2">Summer 2017</div><div id="titleItem3">Customer Service Technician</div>
+                     <ul class="pointItems1">
+                        <li>Provided efficient internet technical support for customers.</li>
+                        <li>Walked customers through troubleshooting on the phone in a timely manner.</li>
+                        <li>Empathized with distressed customers and brought upon an environment of understanding.</li>
+                    </ul>
+                    <div style="height:20px"></div>
+                    <h3>non-Technical Work Experience</h3>
+                   
+                    <div id="titleItem1">Best Buy</div>
+                   <div id="titleItem2">Summer 2016</div><div id="titleItem32">Connected Solutions Sales Associate</div>
+                     <ul class="pointItems2">
+                        <li>Combined an understanding of customer needs and knowledge about consumer electronics to give informative suggestions.</li>
+                        <li>Strived to learn more about the store's products and today's technology to become a more knowledgable salesperson.</li>
+                    </ul>
+                    
+                     <div style="height:10px;border-bottom:1px solid #ddd;margin-bottom:30px;"></div>
+                   
+                    <div id="titleItem13">Home Outfitters</div>
+                   <div id="titleItem23">Summer 2016</div><div id="titleItem33">Guest Services Associate</div>
+                     <ul class="pointItems3">
+                        <li>Responsibly managed money-related transactions</li>
+                        <li>Efficiently multitalked between handling customer inquiries on phone calls, checking out items, and conducting returns.</li>
+                    </ul>
                     </div>
-                    <div id="bubbles">
-                        <div class="bubble1"><div id= "bubbleText1" style="width:394px">A second-year <i>Computer Engineering</i> student studying at the <i>University of British Columbia</i> (UBC)</div><div id="seeMore1"><div width="169px">  click here to read more  </div></div></div>
-                        
-                        <div class="bubble2"><div id= "bubbleText2" style="width:462px">A programming enthusiast, who has experience working with <i>Java</i>, <i>C++</i>, <i>JavaScript</i>, <i>HTML</i>, <i >CSS</i>, <i>ARM Assembly</i>,and <i>Verilog</i></div><div id="seeMore2"><div width="169px">  click here to read more  </div></div></div>
-                        
-                        <div class="bubble3" ><div id= "bubbleText3" style="width:327px">A <i>problem-solver</i> who <i>welcomes challenges</i> and is <i>eager to learn new concepts</i></div><div id="seeMore3"><div width="169px">  click here to read more  </div></div></div>
+                <div id="slide2">
+                <h3>Education</h3>
+                    <div class="school">
+                    <div id="titleItem1">University of British Columbia</div>
+                    <div id="titleItem2">B.ASc. Computer Engineering</div>
+                    <div id="titleItem3">» Second-year transfer, started September 2017
+                    <br/>» Expected Graduation: 2021</div>
+                        </div>
+                    <div class="school">
+                    <div id="titleItem1">University of Regina</div>
+                    <div id="titleItem2">B.ASc. Software Systems Engineering</div>
+                    <div id="titleItem3">» Completed first year<br/>» September 2016- May 2017
                     </div>
-                    <div id="firstPageMore">
-                        <div id="firstMore">
-                            <div class="flipflop"></div>
-                            <div class="lineOut1"></div>
-                            <div class="lineOut2"></div>
-                            <div class="lineOut3"></div>
+                        </div>
+                </div>
+                <div id="slide3">
+                    <h3>Volunteer Experience</h3>
+                    <div id="titleItem1">Regina Engineering Student Society (RESS)</div>
+                    <div id="titleItem2">Visual Media Director</div>
+                    <div id="titleItem3">(September 2016 - May 2017)</div>
+                     <ul class="pointItems">
+                        <li>Designed and created attention-grabbing posters to help market RESS events.</li>
+                         <li>Ensured that the society's social media visuals looked professional and enthralling.</li>
+                        <li>Committed to attending weekly meetings to stay updated on plans within the society.</li>
+                    </ul>
+                </div>
+                <div id="slide4">
+                    <h3>Awards</h3>
+                    <div id="titleItem">Norman A M MacKenzie Scholarship</div>
+                    <div id="descItem"><span class="arr">»</span><div class="awTo">Awarded to:</div> Nine University of British Columbia transfer students.</div>
+                    <div id="titleItem">University of Regina Academic Gold Scholarship</div>
+                    <div id="descItem"><span class="arr">»</span><div class="awTo">Awarded to:</div> University of Regina Students with an average above 95%.</div>
+                    <div id="titleItem">SaskTel Scholarship</div>
+                    <div id="descItem"><span class="arr">»</span><div class="awTo">Awarded to:</div> Seven applicants in Saskatchewan each year.</div>
+                    <div id="titleItem">University of Regina Merit Plus Scholarship </div>
+                    <div id="descItem"><span class="arr">»</span><div class="awTo">Awarded to:</div> Students with a university entrance average above 95%.</div>
+                    </div>
+            </div>
+            
+            <div id="lineGroup"><div class="change1">[Job Experience]</div><div class="change2">[Education]</div><div class="change3">[Volunteering]</div><div class="change4">[Awards]</div></div><div class="title2">select what you want to read about</div>
+                
+            </div><div class="movDot"></div>
+        </div>
+        
+        <div id="thirdPage">
+            <h2 class="t21">Personal</h2> <h2 class="t22">Projects</h2>
+            <div class="boxCode">
+                <div class="projectList">
+                    <ol>
+                        <li><span id="HDBApp">Hexidecimal, Binary, and Decimal Converter App</span></li>
+                        <li><span id="MM">MeeTMinus (@NWHacks)</span></li>
+                       <li><span id="DB">Basic Server Database</span></li>
+                        <li><span id="Cryp">Cryptarithm Solver</span></li>
+                        <li><span id="TaxCalc">Tax Calculator</span></li>
+                        <li><span id="CSSName">CSS Name Animation</span></li>
+                        <li><span id="FAQSite">FAQ Site</span></li>
+                        <li><span id="MultGame">Multiplication Game</span></li>
+                        <li><span id="RM">Simple RISC Machine </span></li>
+                    
+                    
+                    
+                    </ol>
+                </div>
+                <div class="code">
+                <cp>public class</cp> <co>ViewProjects</co> {<br>
+                    
+                    <div class="tabSpace">  </div><cp>static public void</cp> <cb>main</cb>(<cp>String[]</cp> <cr>args</cr>) {<br>
+                    <div class="tabSpace">  </div><div class="tabSpace"></div><cr>System</cr>.<cr>out</cr>.<cb>print</cb>(<cg>"CLICK ON A PROJECT TO SHOW"</cg>);<br>
+                    <div class="tabSpace">  </div><div class="tabSpace"></div><cp>WebWindow</cp> <cr>window</cr> = <cp>new</cp> <cb>WebWindow</cb>(<cr><div style="display:inline-block" id="projectTitle"></div></cr>);<br>
+                    <div class="tabSpace">  </div><div class="tabSpace"></div><cr>window</cr>.<cb>open()</cb>;<br>
+                    <div class="tabSpace">  </div>}<br>
+                    
+                    
+                }
+                </div>
+            </div>
+            <div id="window">
+                <div id="windowTop"><div style="border:1px solid #ddd;display:inline-block;padding:0px 4px 2px 4px;">-</div> <div style="border:1px solid #ddd;display:inline-block;padding:0px 4px 2px 4px;">x</div></div>
+                <div id="windowContent">
+                    <div class="innerContent">
+                        <div class="introWrap"><div class="introText">Click on a project on the right bar to get started!</div></div>
+                        <div class="HDBAppDesc">
+                            <h3>Heximal</h3>
+                            This is an app that <u>converts values between Hexadecimal, Decimal, and Binary!</u> I was inspired by my CPEN 211 class, which required extensive conversions between the three formats. To add, I implemented a <u>history function</u> that will display the last 8 queries. I also learned how to implement animations in the Android API in order to make this app look a little nicer :)
+                        <div class="links">
+                            <a href="https://github.com/andreamah/Heximal">GitHub link</a>
+                        </div>    
+                        </div>
+                        <div class="MMDesc">
+                            <h3>MeeTMinus</h3>
+                        I participated at <u>NWHacks 2018</u>, where I worked with a team of great people in order to implement MeeTMinus. <br>
+                            It helps those who, for example, need to <u>text somebody when they are picking them up and are nearby.</u><br>
+                            
+                        It uses the RightMesh API in order to locate the user and <u>automatically sends a text when someone is nearby a location without Wifi or cell service.</u><br>
+                        Unfortunately, we couldn't finish it in time for the deadline, but hopefully, we will pick it up again!
+                        
+                        <div class="links">
+                        <a href="https://github.com/allison98/MeMinus">GitHub link</a>
+                        <a href="https://devpost.com/software/meminus">DevPost link</a>
+                        <a href="http://meet-minus.com/">Website</a>
+                        </div>   
+                        </div>
+                        <div class="DBDesc">
+                            <h3>Yelp Database</h3>
+
+                            One of my machine problems in CPEN 221 asked us to <u>maintain a database using Yelp's restaurant information</u> in JSON format. I had a lot of fun working with my partner to tackle this project. It involved many components, such as <u>parsing and constructing the JSON format</u>, <u>using ANTLR to parse user input from the server</u>, and <u>maintaining the server itself</u>.
+                        </div>
+                        <div class="CrypDesc">
+                            <h3>Cryptarithm Solver</h3>
+
+                        If you do not know what a cryptarithm is, <a href="http://www.cryptarithms.com/">click here</a>! <br>
+                            For my CPEN 221 course, one of the machine problems prompted us to create a <u>cryptarithm solver</u>.  It does not only take <u>addition</u>, but <u>subtraciton</u>, <u>division</u>, and <u>multiplication</u> also!  
+                        </div> 
+
+                        <div class="TaxCalcDesc">
+                            <h3>Tax Calculator</h3>
+
+                            The first app that I made was around boxing day, so I decided to give myself a <u>handy tool</u> to calculate the <u>sale prices including tax</u>! Looking back at it, I would definitely make some changes if I had the time! (note: tax is according to BC tax value)
+                            
+                        <div class="links">
+                            <a href="https://github.com/andreamah/TaxCalculator">GitHub link</a>
+                        </div>
+                        </div>   
+                        <div class="CSSNameDesc">
+                            <h3>CSS My Name!</h3>
+
+                        I made a fun little <u>animation of my name</u> using <u>CSS</u> hover animations from scratch :) 
+                            <div class="links">
+                            <a href="https://andreamah.github.io/cssmyname/">Preview link</a>
+                            <a href="https://github.com/andreamah/cssmyname">GitHub link</a>
+                        </div>
+                        </div>
+                            
+                        <div class="FAQSiteDesc">
+                            <h3>FAQ Site</h3>
+                            In high school, I had a bit of fun making a <u>lighthearted website</u> that listed and answered some of the most <u>interesting questions</u> that I could find on the internet! I used <u>CSS animations</u>, in addition to <u>JQuery</u> to make it.
+                            
+                        <div class="links">
+                            <a href="https://andreamah.github.io/FAQSite/">Preview link</a>
+                            <a href="https://github.com/andreamah/FAQSite">GitHub link</a>
+                        </div>  
+                        </div>
+                        <div class="MultGameDesc">
+                            <h3>Multiplication Game</h3>
+                        In my first year of university, I coded a <u>multiplication game in the C++ console</u>. Once the player picks their preferred difficulty level, it <u>cumulatively keeps track of score</u> during the game. Then, it <u>prints out the questions and scores in a log file</u> at the end of the game. I also included an extra file that kept a log of the players.
                         </div>
                         
-                        <div id="secondMore">
-                            <div class="flipflop2"></div>
-                            <div class="lineOut12"></div>
-                            <div class="lineOut22"></div>
-                            <div class="lineOut32"></div>
+                        <div class="RMDesc">
+                            <h3>Simple RISC Machine</h3>
+
+                        In my CPEN 211 (Introduction to Microcomputers) course, I worked with my lab partner to make a compiler that <u>took binary encodings translated from ARM Assembly</u>. It <u>performed the different operations that were specified in the ARM code </u>(ie: simple math).
                         </div>
-                        
-                        <div id="thirdMore">
-                            <div class="flipflop3"></div>
-                            <div class="lineOut13"></div>
-                            <div class="lineOut23"></div>
-                            <div class="lineOut33"></div>
-                        </div>
-                        
+                                
                     </div>
                 </div>
             </div>
-	   </div>
+            <div class="crypPhotos">
+                            <img class="crypimage" width="582px" src="./ProfileFiles/crypt.PNG"/>
+            </div>
+            
+            <div class="binhexPhotos">
+                    <img class="binheximage" width="182px" src="./ProfileFiles/binhexadec.gif"/>
+                
+                <div class="arrow">
+                    
+                    <div class="arrow2"></div>
+                    
+                    <div class="bubb"></div>
+                    <div class="bubb1"></div>
+                </div>
+            </div>
+            <div class="dbPhotos">
+                    <img class="dbimage" width="582px" src="./ProfileFiles/db.PNG"/>
+            </div>
+            
+            <div class="mmPhotos">
+                    <img class="mmimage1" width="182px" src="./ProfileFiles/meetminus.png"/>
+                    <img class="mmimage2" width="182px" src="./ProfileFiles/meetminus2.png"/>
+            </div>
+            <div class="taxPhotos">
+                            <img class="taximage" width="182px" src="./ProfileFiles/taxcalc2.gif"/>
+                <div class="arrowtwo">
+                    <div class="arrow2"></div>
+                    <div class="bubb3"></div>
+                </div>
+            </div>
+            <div class="cssnamePhotos">
+                            <img class="cssimage" width="382px" src="./ProfileFiles/cssmyname.gif"/>
+            </div>
+            <div class="faqPhotos">
+                            <img class="faqimage" width="382px" src="./ProfileFiles/FAQSite.gif"/>
+            </div>
+            <div class="multPhotos">
+                            <img class="multimage1" width="382px" src="./ProfileFiles/MultGame.gif"/>
+                        <img class="multimage2" width="400px" src="./ProfileFiles/LogFileMultGame.PNG"/> 
+                            
+                        <img class="multimage3" width="382px" src="./ProfileFiles/recordMultGame.PNG"/>
+            </div>
+        </div>
+        
+        <div id="fourthPage">
+            <h2>Find Me Elsewhere</h2>
+            <div class="elsewhere">Learn more about me, as a future Computer Engineer!</div>
+            <div class="where">GitHub: </div><div class="user"><a href="/">@andreamah</a></div><br/>
+            <div class="where">LinkedIn: </div><div class="user"><a href="/">Andrea Mah</a></div>
+            
+            <div class="abt"><h3>About This Page</h3></div>
+            
+            <div class="pagedesc"><div class="leftbrac">{</div>
+                I coded and designed this page from scratch (no template) using <u>HTML</u>, <u>CSS</u>, <u>JavaScript</u>, and <u>JQuery</u>. This page works best on <u>Google Chrome</u> with screen resolution of at least <u>2160x1440</u>. Unfortunately, I have not yet optimized it for mobile users. It took a while to do, but I hope you enjoyed! 
+                <div class="rightbrac">}</div>
+            </div>
+            
+        </div>
 	</body>
 </html>
