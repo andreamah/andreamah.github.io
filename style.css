@@ -1194,7 +1194,7 @@ body {
     position:absolute;
     top:130%;
     margin-top:100px;
-    height:130%;
+    height:120%;
     width:100%;
     left:0px;
     
@@ -1246,9 +1246,9 @@ body {
 
 #thirdPage {
     position:absolute;
-    top:290%;
+    top:280%;
     left:-5px;
-    height:140%;
+    height:130%;
     width:100%;
     left:0px;
     overflow-y:auto;
