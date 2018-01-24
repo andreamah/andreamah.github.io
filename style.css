@@ -4,7 +4,7 @@ body {
 */
     
 	background-image:url('http://static.tumblr.com/00a8eb0472377872777018120639c18a/kptglgs/lfxnlbyyl/tumblr_static_cb5ilokz4rsok040884ws888w.png');
-	/*background-image:url('');*/
+	
 	background-attachment:fixed;
     width:100%;
         background-color:#fff;
@@ -21,6 +21,20 @@ body {
 
 
 ::-webkit-scrollbar {
+    	height: 10px;
+    	width: 15px;
+    	background: #eee;
+    	border: 7px solid #fff;
+}
+
+::scrollbar-thumb:vertical {
+    	background: #ddd;
+    	border: 6px solid #fff;
+    	width: 7px;
+}
+
+
+::scrollbar {
     	height: 10px;
     	width: 15px;
     	background: #eee;
@@ -303,6 +317,7 @@ body {
     left:0px;
     margin-left:0px;
     top:0;    
+	transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
     -webkit-animation: turnAxle 0.6s forwards;
     -moz-animation: turnAxle 0.6s forwards;
@@ -313,33 +328,33 @@ body {
 }
 
 @-webkit-keyframes turnAxle {
-  0%   {-webkit-transform:rotate(180deg); opacity:0;}
-  100% { -webkit-transform:rotate(90deg);opacity:1;}
+  0%   {-webkit-transform:rotate(180deg); transform:rotate(180deg);opacity:0;}
+  100% { -webkit-transform:rotate(90deg); transform:rotate(90deg); opacity:1;}
 }
 
 @-moz-keyframes turnAxle {
-  0%   { -webkit-transform:rotate(180deg); opacity:0;}
-  100% {-webkit-transform:rotate(90deg);opacity:1;}
+  0%   {-webkit-transform:rotate(180deg); transform:rotate(180deg);opacity:0;}
+  100% { -webkit-transform:rotate(90deg); transform:rotate(90deg); opacity:1;}
 }
 
 @keyframes turnAxle {
-  0%   { -webkit-transform:rotate(180deg); opacity:0;}
-  100% {-webkit-transform:rotate(90deg);opacity:1;}
+  0%   {-webkit-transform:rotate(180deg); transform:rotate(180deg);opacity:0;}
+  100% { -webkit-transform:rotate(90deg); transform:rotate(90deg); opacity:1;}
 }
 
 @-webkit-keyframes turnAxle2 {
-  0%   {-webkit-transform:rotate(0deg); opacity:0;}
-  100% { -webkit-transform:rotate(90deg);opacity:1;}
+  0%   {-webkit-transform:rotate(0deg); transform:rotate(180deg);opacity:0;}
+  100% { -webkit-transform:rotate(90deg); transform:rotate(90deg); opacity:1;}
 }
 
 @-moz-keyframes turnAxle2 {
-  0%   { -webkit-transform:rotate(0deg); opacity:0;}
-  100% {-webkit-transform:rotate(90deg);opacity:1;}
+  0%   {-webkit-transform:rotate(0deg); transform:rotate(180deg);opacity:0;}
+  100% { -webkit-transform:rotate(90deg); transform:rotate(90deg); opacity:1;}
 }
 
 @keyframes turnAxle2 {
-  0%   { -webkit-transform:rotate(0deg); opacity:0;}
-  100% {-webkit-transform:rotate(90deg);opacity:1;}
+  0%   {-webkit-transform:rotate(0deg); transform:rotate(180deg);opacity:0;}
+  100% { -webkit-transform:rotate(90deg); transform:rotate(90deg); opacity:1;}
 }
 
 .pointLineFirst {
@@ -348,6 +363,11 @@ body {
     height:1px;
     margin-left:0px;
     background-color:#ccc;
+    opacity:0;
+    -webkit-animation: appear 0.6s forwards;
+    -moz-animation: appear 0.6s forwards;
+    animation: appear 0.6s forwards;
+    animation-delay: 2.7s;
 
 }
 
@@ -360,7 +380,11 @@ body {
     background-color:#ccc;
     
     position:absolute;
-    z-index:;
+    opacity:0;
+    -webkit-animation: appear 0.6s forwards;
+    -moz-animation: appear 0.6s forwards;
+    animation: appear 0.6s forwards;
+    animation-delay: 2.7s;
 
 }
 
@@ -505,8 +529,10 @@ body {
     color:#aaa;
     background-color: #FFFFFF;
     border-top: #ccc solid 1px;
-    line-height: 25px;
+    border-left: #ccc solid 0px;
     border-bottom: #ccc solid 1px;
+    border-right: #ccc double 0px;
+    line-height: 25px;
     text-align:right;
     width:0px;
     -webkit-animation: extendBubble1Width 0.7s forwards;
@@ -521,7 +547,7 @@ body {
     padding:15px 0px 15px 0px;
     border-right: #ccc double 0px;
     border-left: #ccc solid 0px;}
-  100% { width:394px;
+  100% { width:398px;
     padding:15px 10px 15px 25px;
     border-right: #ccc double 3px;
     border-left: #ccc solid 1px;}
@@ -532,7 +558,7 @@ body {
     padding:15px 0px 15px 0px;
     border-right: #ccc double 0px;
     border-left: #ccc solid 0px;}
-  100% { width:394px;
+  100% { width:398px;
     padding:15px 10px 15px 25px;
     border-right: #ccc double 3px;
     border-left: #ccc solid 1px;}
@@ -543,7 +569,7 @@ body {
     padding:15px 0px 15px 0px;
     border-right: #ccc double 0px;
     border-left: #ccc solid 0px;}
-  100% { width:394px;
+  100% { width:398px;
     padding:15px 10px 15px 25px;
     border-right: #ccc double 3px;
     border-left: #ccc solid 1px;}
@@ -570,6 +596,8 @@ body {
     -moz-animation: extendBubble2Width 0.7s forwards;
     animation: extendBubble2Width 0.7s forwards;
     animation-delay: 3.3s;
+    
+    
 }
 
 @-webkit-keyframes extendBubble2Width {
@@ -579,7 +607,7 @@ body {
     border-right: #ccc double 0px;
     border-left: #ccc solid 0px;}
   100% { 
-    width: 462px;
+    width: 463px;
     padding:15px 10px 15px 15px;
     border-right: #ccc double 3px;
     border-left: #ccc solid 1px;}
@@ -592,7 +620,7 @@ body {
     border-right: #ccc double 0px;
     border-left: #ccc solid 0px;}
   100% { 
-    width: 462px;
+    width: 463px;
     padding:15px 10px 15px 15px;
     border-right: #ccc double 3px;
     border-left: #ccc solid 1px;}
@@ -605,7 +633,7 @@ body {
     border-right: #ccc double 0px;
     border-left: #ccc solid 0px;}
   100% { 
-    width: 462px;
+    width: 463px;
     padding:15px 10px 15px 15px;
     border-right: #ccc double 3px;
     border-left: #ccc solid 1px;}
@@ -798,11 +826,11 @@ body {
     padding-right:0px;
 }
 
-.flipText i {
+.flipText i,.flipText2 i {
     color:#777;
 }
 
-.flipText a {
+.flipText a, .flipText2 a {
     text-shadow:7px 0px transparent, -7px 0px transparent;
     background-color:#fff;
     -moz-transition-duration: 0.7s;
@@ -812,7 +840,7 @@ body {
 }
 
 
-.flipText a:hover {
+.flipText a:hover,.flipText2 a:hover {
     text-shadow:0px 0px #cccccc, 0px 0px #cccccc;
     background-color:#eee;
     -moz-transition-duration: 0.7s;
@@ -1138,7 +1166,14 @@ body {
 }
 
 .flipText {
-    width:200px;
+    width:211px;
+    padding:10px;
+    color:#aaa;
+    font-size:12px;
+}
+
+.flipText2 {
+    width:220px;
     padding:10px;
     color:#aaa;
     font-size:12px;
@@ -1518,6 +1553,7 @@ h2.t21 {
     padding-bottom:5px;
     padding-right:5px;
     -webkit-transform: rotate(39deg);
+    transform: rotate(39deg);
 }
 
 .change2 {
@@ -1532,6 +1568,7 @@ h2.t21 {
     padding-bottom:5px;
     padding-right:5px;
     -webkit-transform: rotate(39deg);
+    transform: rotate(39deg);
     
 }
 
@@ -1547,6 +1584,7 @@ h2.t21 {
     padding-bottom:5px;
     padding-right:5px;
     -webkit-transform: rotate(39deg);
+    transform: rotate(39deg);
 }
 
 .change4 {
@@ -1561,6 +1599,7 @@ h2.t21 {
     padding-bottom:5px;
     padding-right:5px;
     -webkit-transform: rotate(39deg);
+    transform: rotate(39deg);
 }
 
 
@@ -1587,6 +1626,7 @@ h2.t21 {
     top:125px;
     left:935px;
     -webkit-transform: rotate(-39deg);
+    transform: rotate(-39deg);
     overflow:hidden;
     border-radius:5px; 
 }
@@ -1594,6 +1634,7 @@ h2.t21 {
 
 .title2 {
     -webkit-transform:rotate(51deg);
+    transform:rotate(51deg);
     position:absolute;
     top:455px;
     left:730px;
@@ -1622,7 +1663,7 @@ h2.t21 {
     border:3px solid #eee;
     border-radius:100%;
 }
-
+/*
 @-webkit-keyframes spin {
 
     0%{
@@ -1637,7 +1678,7 @@ h2.t21 {
     } 
 
 }
-
+*/
 .dot1 {
     background-color:#ffffff;
     border-radius:100%;
@@ -2057,8 +2098,7 @@ h2.t21 {
     background-color:#fff;
     opacity:0;
 }
-
-.arrow2:after
+.arrow2
 {
    
     content: '';
@@ -2071,6 +2111,22 @@ h2.t21 {
     z-index: 1;
     right: -68px;
     top: 130px;
+    opacity:0;
+}
+.arrow3
+{
+   
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 41px 0px 41px 68px;
+    border-color: transparent #ddd;
+    display: block;
+    width: 0;
+    z-index: 1;
+    right: -68px;
+    top: 130px;
+    opacity:0;
 }
 
 .bubb {
@@ -2082,7 +2138,8 @@ h2.t21 {
     margin-left:400px;
     margin-top:-405px;
     border:10px solid #f9f9f9;
-    z-index:-1
+    z-index:-1;
+    opacity:0;
 }
 
 .bubb1 {
@@ -2094,10 +2151,11 @@ h2.t21 {
     margin-left:400px;
     margin-top:-145px;
     border:10px solid #eee;
-    z-index:-1
+    z-index:-1;
+    opacity:0;
 }
 
-.bubb3 {
+.bubb2 {
     position:absolute;
     border-radius:100%;
     background-color:#e5e5e5;
@@ -2106,12 +2164,10 @@ h2.t21 {
     margin-left:240px;
     margin-top:-405px;
     border:10px solid #f9f9f9;
-    z-index:-1
-}
-
-.arrowtwo {
+    z-index:-1;
     opacity:0;
 }
+
 #slide1 h2{
     background-color:#f1f1f1;
     letter-spacing:2px;
