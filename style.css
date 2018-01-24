@@ -1248,7 +1248,7 @@ body {
     position:absolute;
     top:280%;
     left:-5px;
-    height:130%;
+    height:140%;
     width:100%;
     left:0px;
     overflow-y:auto;
@@ -1276,7 +1276,6 @@ h2.t21 {
 #fourthPage {
     position:absolute;
     top:410%;
-    margin-top:160px;
     left:-5px;
     height:100%;
     width:100%;
