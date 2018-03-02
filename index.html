@@ -15,7 +15,7 @@
 	
 		<script>
 			$(document).ready(function(){
-                 
+                 //CONTROLS INTRODUCTORY TABLE OF CONTENTS TOGGLES. EACH LINE WITHIN THE CONDITIONAL ANIMATES A PART OF THE SHAPE
                 
                     var open1 = false;
                     var open2 = false;
@@ -25,30 +25,41 @@
                     //if open, close
                     if (open1)
                         {
-                            
+                            //minimizes the first line
                             $(".lineOut1").animate({"width":0}, 200);
+                            
+                            //minimize the second line out
                             setTimeout( function(){$(".lineOut2").animate({"height":0}, 200)},225);
+                            
+                            //minimize the third line
                             setTimeout(function(){$(".lineOut3").animate({"width":0}, 200)},500);
-
+                            
+                            //minimize the width, and horizontal borders and padding for the box
                             setTimeout(function(){$(".flipflop").animate({"width":0}, 200)},775);
-
                             setTimeout(function(){$(".flipflop").animate({"borderRightWidth": 0}, 50)},775);
                             setTimeout( function(){$(".flipflop").animate({"borderLeftWidth":0}, 100)},775);
                             setTimeout( function(){$(".flipflop").animate({"paddingRight":0}, 100)},775);
+                            
+                            //hide quote decoration
                             setTimeout( function(){$(".quote1").animate({"opacity":0}, 100)},775);
                             open1 = false;
                         }
                     //if closed, open
                      else
                         {
+                            //extend the first, second, and third line respectively
                             setTimeout(function(){$(".lineOut1").animate({"width": 51}, 200)}, 675);
                             setTimeout( function(){$(".lineOut2").animate({"height": 33}, 200)},450);
                             setTimeout( function(){$(".lineOut3").animate({"width": 65}, 200)},225);
 
+                            
+                            //maximize the width, and horizontal borders and padding for the box
                             $(".flipflop").animate({"width": 260}, 200);
                             $(".flipflop").animate({"borderRightWidth": 1}, 100);
                             $(".flipflop").animate({"borderLeftWidth": 1}, 50);
                             $(".flipflop").animate({"paddingRight": 10}, 50);
+                            
+                            //show quote decoration
                             $(".quote1").animate({"opacity": 1}, 50);
                             open1 = true;
                         }
@@ -56,38 +67,44 @@
                    
                 });
                 
+                //repeat process similarly for other introductions, but for varying sizes
                 $("#seeMore2").click(function() {
 
                     //if open, close
                     if (open2)
                         {
-                            
+                            //minimize the first, second, and third line respectively
                             $(".lineOut12").animate({"width":0}, 200);
                             setTimeout( function(){$(".lineOut22").animate({"height":0}, 200)},225);
                             setTimeout(function(){$(".lineOut32").animate({"width":0}, 200)},500);
-
+                            
+                            //minimize the width, and horizontal borders and padding for the box
                             setTimeout(function(){$(".flipflop2").animate({"width":0}, 200)},775);
-
                             setTimeout(function(){$(".flipflop2").animate({"borderRightWidth": 0}, 50)},775);
                             setTimeout( function(){$(".flipflop2").animate({"borderLeftWidth":0}, 100)},775);
                             setTimeout( function(){$(".flipflop2").animate({"paddingRight":0}, 100)},775);
+                            
+                            //hide quote decoration
                             setTimeout( function(){$(".quote2").animate({"opacity":0}, 100)},775);
                             open2 = false;
                         }
                     //if closed, open
                      else
                         {
+                            //extend the first, second, and third line respectively
                             setTimeout(function(){$(".lineOut12").animate({"width": 88}, 200)}, 675);
                             setTimeout( function(){$(".lineOut22").animate({"height": 14}, 200)},450);
                             setTimeout( function(){$(".lineOut32").animate({"width": 30}, 200)},225);
 
+                            //maximize the width, and horizontal borders and padding for the box
                             $(".flipflop2").animate({"width": 260}, 200);
                             $(".flipflop2").animate({"borderRightWidth": 1}, 100);
                             $(".flipflop2").animate({"borderLeftWidth": 1}, 50);
                             $(".flipflop2").animate({"paddingRight": 10}, 50);
+                            
+                            //show quote decoration
                             $(".quote2").animate({"opacity": 1}, 50);
                             open2 = true;
-                            //add features to close others 
                         }
                     
                    
@@ -98,41 +115,48 @@
                     //if open, close
                     if (open3)
                         {
-                            
+                            //minimize the first, second, and third line respectively
                             $(".lineOut13").animate({"width":0}, 200);
                             setTimeout( function(){$(".lineOut23").animate({"height":0}, 200)},225);
                             setTimeout(function(){$(".lineOut33").animate({"width":0}, 200)},500);
 
+                            //minimize the width, and horizontal borders and padding for the box
                             setTimeout(function(){$(".flipflop3").animate({"width":0}, 200)},775);
                             setTimeout(function(){$(".flipflop3").animate({"borderRightWidth": 0}, 50)},775);
                             setTimeout( function(){$(".flipflop3").animate({"borderLeftWidth":0}, 100)},775);
                             setTimeout( function(){$(".flipflop3").animate({"paddingRight":0}, 100)},775);
                             setTimeout( function(){$(".flipflop3").animate({"paddingRight":0}, 100)},775);
+                            
+                            //hide quote decoration
                             setTimeout( function(){$(".quote3").animate({"opacity":0}, 100)},775);
                             open3 = false;
                         }
                     //if closed, open
                      else
                         {
+                            //extend the first, second, and third line respectively
                             setTimeout(function(){$(".lineOut13").animate({"width": 31}, 200)}, 675);
                             setTimeout( function(){$(".lineOut23").animate({"height": 21}, 200)},450);
                             setTimeout( function(){$(".lineOut33").animate({"width": 86}, 200)},225);
 
+                            //maximize the width, and horizontal borders and padding for the box
                             $(".flipflop3").animate({"width": 260}, 200);
                             $(".flipflop3").animate({"borderRightWidth": 1}, 100);
                             $(".flipflop3").animate({"borderLeftWidth": 1}, 50);
                             $(".flipflop3").animate({"paddingRight": 10}, 50);
                             $(".flipflop3").animate({"paddingRight": 10}, 50);
+                            
+                            //show quote decoration
                             $(".quote3").animate({"opacity": 1}, 50);
                             open3 = true;
-                            //add features to close others 
                         }
                     
                    
                 });
                 
+                //CLICK EFFECTS FOR SLIDE BAR IN SECOND SECTION (in order from top to bottom)
+                //for each, move the dot to its new position and switch to a new slide
                 $(".change1").click(function(){
-                     
                             $(".movDot").animate({"top": 275,"left": 845}, 700);
                             $("#slidePos").animate({"marginTop": 0}, 700);
                 });
@@ -153,7 +177,9 @@
                             $("#slidePos").animate({"marginTop": -1200}, 700);
                     
                 });
-                //https://stackoverflow.com/questions/19365386/jquery-change-button-text-on-click
+                
+                //CHANGING TEXT ON CLICK FOR PORTFOLIO PAGE TO CURRENT TOPIC
+                //also minimizes all information for other projects except the one at hand
                 $('#HDBApp').click(function(){
                     
                     $(this).closeAllBut(); 
@@ -201,19 +227,18 @@
                     $('#projectTitle').text('RISCMachine');
                 });
                 
+                //RESULTANT CLICK EFFECTS FOR PROFILE
+                //called when clicking on each of the project titles
+                //for each effect, let the box fit the new text and change opacity of photo based on which is clicked
+                
+                //run on the logic that, if the object clicked is the item at hand, SHOW its information. otherwise, HIDE it.
+                //each includes a description, a change to window height, and some images and decorations (in some).
                 (function( $ ){
                    $.fn.closeAllBut = function() {
                        $('.introWrap').animate({"height": 0}, 200);
                        $('.introWrap').animate({"marginTop": 0}, 100);
-                       if (!$(this).is($('#MultGame')))
+                       if ($(this).is($('#MultGame')))
                            { 
-                               $('#MultGame').animate({"opacity": 1}, 300);
-                               $('.MultGameDesc').animate({"height": 0}, 300);
-                               
-                               $('.multimage1').animate({"opacity": 0}, 300);
-                               $('.multimage2').animate({"opacity": 0}, 300);
-                               $('.multimage3').animate({"opacity": 0}, 300);
-                           } else {
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.MultGameDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 285}, 300);
@@ -221,45 +246,43 @@
                                $('.multimage1').animate({"opacity": 1}, 300);
                                $('.multimage2').animate({"opacity": 1}, 300);
                                $('.multimage3').animate({"opacity": 1}, 300);
-                           }
-                       
-                       if (!$(this).is($('#FAQSite')))
-                           { 
-                               $('#FAQSite').animate({"opacity": 1}, 300);
-                               $('.FAQSiteDesc').animate({"height": 0}, 300);
-                               $('.faqimage').animate({"opacity": 0}, 300);
                            } else {
                                
+                               $('#MultGame').animate({"opacity": 1}, 300);
+                               $('.MultGameDesc').animate({"height": 0}, 300);
+                               
+                               $('.multimage1').animate({"opacity": 0}, 300);
+                               $('.multimage2').animate({"opacity": 0}, 300);
+                               $('.multimage3').animate({"opacity": 0}, 300);
+                           }
+                       
+                       if ($(this).is($('#FAQSite')))
+                           { 
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.FAQSiteDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 340}, 300);
                                $('.faqimage').animate({"opacity": 1}, 300);
+                               
+                           } else {
+                               
+                               $('#FAQSite').animate({"opacity": 1}, 300);
+                               $('.FAQSiteDesc').animate({"height": 0}, 300);
+                               $('.faqimage').animate({"opacity": 0}, 300);
                            }
-                       if (!$(this).is($('#DB')))
+                       if ($(this).is($('#DB')))
                            { 
+                               $(this).animate({"opacity": 0.4}, 300);
+                               $('.DBDesc').animate({"height": 420}, 300);
+                               $('#window').animate({"height": 340}, 300);
+                               $('.dbPhotos').animate({"opacity": 1}, 300);
+                           } else {
                                $('#DB').animate({"opacity": 1}, 300);
                                $('.DBDesc').animate({"height": 0}, 300);
                                $('.dbPhotos').animate({"opacity": 0}, 300);
-                           } else {
-                               
-                               $(this).animate({"opacity": 0.4}, 300);
-                               $('.DBDesc').animate({"height": 420}, 300);
-                               $('#window').animate({"height": 330}, 300);
-                               $('.dbPhotos').animate({"opacity": 1}, 300);
                            }
                        
-                      if (!$(this).is($('#HDBApp')))
+                      if ($(this).is($('#HDBApp')))
                            { 
-                               $('#HDBApp').animate({"opacity": 1}, 300);
-                               $('.HDBAppDesc').animate({"height": 0}, 300);
-                               $('.binheximage').animate({"opacity": 0}, 300);
-                               
-                               $('.arrow2').animate({"opacity": 0}, 300);
-                               $('.bubb').animate({"opacity": 0}, 300);
-                               $('.bubb1').animate({"opacity": 0}, 300);
-                               
-                           } else {
-                               
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.HDBAppDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 365}, 300);
@@ -267,74 +290,83 @@
                                $('.arrow2').animate({"opacity": 1}, 300);
                                $('.bubb').animate({"opacity": 1}, 300);
                                $('.bubb1').animate({"opacity": 1}, 300);
-                               
-                           }
-                       if (!$(this).is($('#TaxCalc')))
-                           { 
-                               $('#TaxCalc').animate({"opacity": 1}, 300);
-                               $('.TaxCalcDesc').animate({"height": 0}, 300);
-                               $('.taximage').animate({"opacity": 0}, 300);
-                               $('.arrow3').animate({"opacity": 0}, 300);
-                               $('.bubb2').animate({"opacity": 0}, 300);
                            } else {
                                
+                               
+                               
+                               $('#HDBApp').animate({"opacity": 1}, 300);
+                               $('.HDBAppDesc').animate({"height": 0}, 300);
+                               $('.binheximage').animate({"opacity": 0}, 300);
+                               
+                               $('.arrow2').animate({"opacity": 0}, 300);
+                               $('.bubb').animate({"opacity": 0}, 300);
+                               $('.bubb1').animate({"opacity": 0}, 300);
+                           }
+                       if ($(this).is($('#TaxCalc')))
+                           { 
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.TaxCalcDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 295}, 300);
                                $('.taximage').animate({"opacity": 1}, 300);
                                $('.arrow3').animate({"opacity": 1}, 300);
                                $('.bubb2').animate({"opacity": 1}, 300);
-                           }
-                       if (!$(this).is($('#Cryp')))
-                           { 
-                               $('#Cryp').animate({"opacity": 1}, 300);
-                               $('.CrypDesc').animate({"height": 0}, 300);
-                               $('.crypPhotos').animate({"opacity": 0}, 300);
                            } else {
-                               
+                               $('#TaxCalc').animate({"opacity": 1}, 300);
+                               $('.TaxCalcDesc').animate({"height": 0}, 300);
+                               $('.taximage').animate({"opacity": 0}, 300);
+                               $('.arrow3').animate({"opacity": 0}, 300);
+                               $('.bubb2').animate({"opacity": 0}, 300);
+                           }
+                       if ($(this).is($('#Cryp')))
+                           { 
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.CrypDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 330}, 300);
                                $('.crypPhotos').animate({"opacity": 1}, 300);
-                           }
-                       if (!$(this).is($('#CSSName')))
-                           { 
-                               $('#CSSName').animate({"opacity": 1}, 300);
-                               $('.CSSNameDesc').animate({"height": 0}, 300);
-                               $('.cssimage').animate({"opacity": 0}, 300);
                            } else {
                                
+                               $('#Cryp').animate({"opacity": 1}, 300);
+                               $('.CrypDesc').animate({"height": 0}, 300);
+                               $('.crypPhotos').animate({"opacity": 0}, 300);
+                           }
+                       if ($(this).is($('#CSSName')))
+                           { 
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.CSSNameDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 270}, 300);
                                $('.cssimage').animate({"opacity": 1}, 300);
-                           }
-                       if (!$(this).is($('#RM')))
-                           { 
-                               $('#RM').animate({"opacity": 1}, 300);
-                               $('.RMDesc').animate({"height": 0}, 300);
                            } else {
                                
+                               $('#CSSName').animate({"opacity": 1}, 300);
+                               $('.CSSNameDesc').animate({"height": 0}, 300);
+                               $('.cssimage').animate({"opacity": 0}, 300);
+                           }
+                       if ($(this).is($('#RM')))
+                           { 
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.RMDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 250}, 300);
-                           }
-                       if (!$(this).is($('#MM')))
-                           { 
-                               $('#MM').animate({"opacity": 1}, 300);
-                               $('.MMDesc').animate({"height": 0}, 300);
-                               $('.mmPhotos').animate({"opacity": 0}, 300);
                            } else {
+                               $('#RM').animate({"opacity": 1}, 300);
+                               $('.RMDesc').animate({"height": 0}, 300);
                                
+                           }
+                       if ($(this).is($('#MM')))
+                           { 
                                $(this).animate({"opacity": 0.4}, 300);
                                $('.MMDesc').animate({"height": 450}, 300);
                                $('#window').animate({"height": 505}, 300);
                                $('.mmPhotos').animate({"opacity": 1}, 300);
+                           } else {
+                               $('#MM').animate({"opacity": 1}, 300);
+                               $('.MMDesc').animate({"height": 0}, 300);
+                               $('.mmPhotos').animate({"opacity": 0}, 300);
                            }
                       return this;
                    }; 
                 })( jQuery );
                 
+                //SCROLL TO APPROPRIATE SECTION FROM INTRODUCTIONS
                 (function( $ ){
                    $.fn.closeItem = function() {
                       $(this).animate({"opacity": 0}, 300);
@@ -569,6 +601,9 @@
                             <h3>Yelp Database</h3>
 
                             One of my machine problems in CPEN 221 asked us to <u>maintain a database using Yelp's restaurant information</u> in JSON format. I had a lot of fun working with my partner to tackle this project. It involved many components, such as <u>parsing and constructing the JSON format</u>, <u>using ANTLR to parse user input from the server</u>, and <u>maintaining the server itself</u>.
+                            <div class="links">
+                            <a href="https://github.com/andreamah/Yelp-Database-Server">GitHub link</a>
+                        </div>
                         </div>
                         <div class="CrypDesc">
                             <h3>Cryptarithm Solver</h3>
