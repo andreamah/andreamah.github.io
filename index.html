@@ -9,14 +9,14 @@
 		<title>.profile</title>
 		<link rel="stylesheet" type="text/css" href="./style.css" />
         <style type="text/css" ></style>
-		
+
 
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	
+
 		<script>
 			$(document).ready(function(){
                  //CONTROLS INTRODUCTORY TABLE OF CONTENTS TOGGLES. EACH LINE WITHIN THE CONDITIONAL ANIMATES A PART OF THE SHAPE
-                
+
                     var open1 = false;
                     var open2 = false;
                     var open3 = false;
@@ -27,19 +27,19 @@
                         {
                             //minimizes the first line
                             $(".lineOut1").animate({"width":0}, 200);
-                            
+
                             //minimize the second line out
                             setTimeout( function(){$(".lineOut2").animate({"height":0}, 200)},225);
-                            
+
                             //minimize the third line
                             setTimeout(function(){$(".lineOut3").animate({"width":0}, 200)},500);
-                            
+
                             //minimize the width, and horizontal borders and padding for the box
                             setTimeout(function(){$(".flipflop").animate({"width":0}, 200)},775);
                             setTimeout(function(){$(".flipflop").animate({"borderRightWidth": 0}, 50)},775);
                             setTimeout( function(){$(".flipflop").animate({"borderLeftWidth":0}, 100)},775);
                             setTimeout( function(){$(".flipflop").animate({"paddingRight":0}, 100)},775);
-                            
+
                             //hide quote decoration
                             setTimeout( function(){$(".quote1").animate({"opacity":0}, 100)},775);
                             open1 = false;
@@ -52,21 +52,21 @@
                             setTimeout( function(){$(".lineOut2").animate({"height": 33}, 200)},450);
                             setTimeout( function(){$(".lineOut3").animate({"width": 65}, 200)},225);
 
-                            
+
                             //maximize the width, and horizontal borders and padding for the box
                             $(".flipflop").animate({"width": 260}, 200);
                             $(".flipflop").animate({"borderRightWidth": 1}, 100);
                             $(".flipflop").animate({"borderLeftWidth": 1}, 50);
                             $(".flipflop").animate({"paddingRight": 10}, 50);
-                            
+
                             //show quote decoration
                             $(".quote1").animate({"opacity": 1}, 50);
                             open1 = true;
                         }
-                    
-                   
+
+
                 });
-                
+
                 //repeat process similarly for other introductions, but for varying sizes
                 $("#seeMore2").click(function() {
 
@@ -77,13 +77,13 @@
                             $(".lineOut12").animate({"width":0}, 200);
                             setTimeout( function(){$(".lineOut22").animate({"height":0}, 200)},225);
                             setTimeout(function(){$(".lineOut32").animate({"width":0}, 200)},500);
-                            
+
                             //minimize the width, and horizontal borders and padding for the box
                             setTimeout(function(){$(".flipflop2").animate({"width":0}, 200)},775);
                             setTimeout(function(){$(".flipflop2").animate({"borderRightWidth": 0}, 50)},775);
                             setTimeout( function(){$(".flipflop2").animate({"borderLeftWidth":0}, 100)},775);
                             setTimeout( function(){$(".flipflop2").animate({"paddingRight":0}, 100)},775);
-                            
+
                             //hide quote decoration
                             setTimeout( function(){$(".quote2").animate({"opacity":0}, 100)},775);
                             open2 = false;
@@ -101,15 +101,15 @@
                             $(".flipflop2").animate({"borderRightWidth": 1}, 100);
                             $(".flipflop2").animate({"borderLeftWidth": 1}, 50);
                             $(".flipflop2").animate({"paddingRight": 10}, 50);
-                            
+
                             //show quote decoration
                             $(".quote2").animate({"opacity": 1}, 50);
                             open2 = true;
                         }
-                    
-                   
+
+
                 });
-                
+
                  $("#seeMore3").click(function() {
 
                     //if open, close
@@ -126,7 +126,7 @@
                             setTimeout( function(){$(".flipflop3").animate({"borderLeftWidth":0}, 100)},775);
                             setTimeout( function(){$(".flipflop3").animate({"paddingRight":0}, 100)},775);
                             setTimeout( function(){$(".flipflop3").animate({"paddingRight":0}, 100)},775);
-                            
+
                             //hide quote decoration
                             setTimeout( function(){$(".quote3").animate({"opacity":0}, 100)},775);
                             open3 = false;
@@ -145,233 +145,207 @@
                             $(".flipflop3").animate({"borderLeftWidth": 1}, 50);
                             $(".flipflop3").animate({"paddingRight": 10}, 50);
                             $(".flipflop3").animate({"paddingRight": 10}, 50);
-                            
+
                             //show quote decoration
                             $(".quote3").animate({"opacity": 1}, 50);
                             open3 = true;
                         }
-                    
-                   
+
+
                 });
-                
-                //CLICK EFFECTS FOR SLIDE BAR IN SECOND SECTION (in order from top to bottom)
-                //for each, move the dot to its new position and switch to a new slide
-                $(".change1").click(function(){
-                            $(".movDot").animate({"top": 275,"left": 845}, 700);
-                            $("#slidePos").animate({"marginTop": 0}, 700);
-                });
-                $(".change2").click(function(){
-                     
-                            $(".movDot").animate({"top": 367,"left": 918}, 700);
-                            $("#slidePos").animate({"marginTop": -400}, 700);
-                });
-                $(".change3").click(function(){
-                     
-                            $(".movDot").animate({"top": 452,"left": 987}, 700);
-                            $("#slidePos").animate({"marginTop": -800}, 700);
-                    
-                });
-                $(".change4").click(function(){
-                     
-                            $(".movDot").animate({"top": 542,"left": 1059}, 700);
-                            $("#slidePos").animate({"marginTop": -1200}, 700);
-                    
-                });
-                
+
+
                 //CHANGING TEXT ON CLICK FOR PORTFOLIO PAGE TO CURRENT TOPIC
                 //also minimizes all information for other projects except the one at hand
+
                 $('#HDBApp').click(function(){
-                    
-                    $(this).closeAllBut(); 
-                    $('#projectTitle').text('HDBConverter');   
-                        
+                    $(this).closeAllBut();
+                    $('#projectTitle').text('HDBConverter');
+
                 });
-                
+
                 $('#DB').click(function(){
-                    $(this).closeAllBut(); 
+                    $(this).closeAllBut();
                     $('#projectTitle').text('YelpDatabase');
                 });
-                
-                $('#TaxCalc').click(function(){
-                    $(this).closeAllBut(); 
-                    $('#projectTitle').text('TaxCalculator');
-                });
-                
+
+
                 $('#Cryp').click(function(){
-                    $(this).closeAllBut(); 
+                    $(this).closeAllBut();
                     $('#projectTitle').text('Cryptarithms');
                 });
-                
+
                 $('#CSSName').click(function(){
                     $(this).closeAllBut();
                     $('#projectTitle').text('CSSMyName');
                 });
-                
-                 $('#FAQSite').click(function(){
-                    $(this).closeAllBut(); 
-                    $('#projectTitle').text('FAQSite');
-                });
-                
+
+
                 $('#MultGame').click(function(){
-                    $(this).closeAllBut();   
+                    $(this).closeAllBut();
                     $('#projectTitle').text('MultGame');
                 });
-                
+
                 $('#MM').click(function(){
-                    $(this).closeAllBut();   
+                    $(this).closeAllBut();
                     $('#projectTitle').text('MeeTMinus');
                 });
-                
+
                 $('#RM').click(function(){
-                    $(this).closeAllBut();   
+                    $(this).closeAllBut();
                     $('#projectTitle').text('RISCMachine');
                 });
-                
+
+								$('#Heatmap').click(function(){
+                    $(this).closeAllBut();
+                    $('#projectTitle').text('Heatmap');
+                });
+
+								$('#TestBench').click(function(){
+                    $(this).closeAllBut();
+                    $('#projectTitle').text('TestBench');
+                });
+
                 //RESULTANT CLICK EFFECTS FOR PROFILE
                 //called when clicking on each of the project titles
                 //for each effect, let the box fit the new text and change opacity of photo based on which is clicked
-                
+
                 //run on the logic that, if the object clicked is the item at hand, SHOW its information. otherwise, HIDE it.
                 //each includes a description, a change to window height, and some images and decorations (in some).
                 (function( $ ){
                    $.fn.closeAllBut = function() {
                        $('.introWrap').animate({"height": 0}, 200);
                        $('.introWrap').animate({"marginTop": 0}, 100);
-                       if ($(this).is($('#MultGame')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
-                               $('.MultGameDesc').animate({"height": 420}, 300);
-                               $('#window').animate({"height": 285}, 300);
-                               
-                               $('.multimage1').animate({"opacity": 1}, 300);
-                               $('.multimage2').animate({"opacity": 1}, 300);
-                               $('.multimage3').animate({"opacity": 1}, 300);
-                           } else {
-                               
-                               $('#MultGame').animate({"opacity": 1}, 300);
-                               $('.MultGameDesc').animate({"height": 0}, 300);
-                               
-                               $('.multimage1').animate({"opacity": 0}, 300);
-                               $('.multimage2').animate({"opacity": 0}, 300);
-                               $('.multimage3').animate({"opacity": 0}, 300);
-                           }
-                       
-                       if ($(this).is($('#FAQSite')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
-                               $('.FAQSiteDesc').animate({"height": 420}, 300);
-                               $('#window').animate({"height": 340}, 300);
-                               $('.faqimage').animate({"opacity": 1}, 300);
-                               
-                           } else {
-                               
-                               $('#FAQSite').animate({"opacity": 1}, 300);
-                               $('.FAQSiteDesc').animate({"height": 0}, 300);
-                               $('.faqimage').animate({"opacity": 0}, 300);
-                           }
+                       if ($(this).is($('#MultGame'))){
+													 $(this).addClass('bgcolor');
+												   $('.MultGameDesc').animate({"height": 420}, 300);
+												   $('#window').animate({"height": 285}, 300);
+
+												   $('.multimage1').animate({"opacity": 1}, 300);
+												   $('.multimage2').animate({"opacity": 1}, 300);
+												   $('.multimage3').animate({"opacity": 1}, 300);
+                        } else {
+														// console.log("WAH2")
+														$('#MultGame').removeClass('bgcolor');
+		                       	$('.MultGameDesc').animate({"height": 0}, 300);
+
+		                       $('.multimage1').animate({"opacity": 0}, 300);
+		                       $('.multimage2').animate({"opacity": 0}, 300);
+		                       $('.multimage3').animate({"opacity": 0}, 300);
+	                       }
+
                        if ($(this).is($('#DB')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
+                           {
+													 		 $(this).addClass('bgcolor');
                                $('.DBDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 340}, 300);
                                $('.dbPhotos').animate({"opacity": 1}, 300);
                            } else {
-                               $('#DB').animate({"opacity": 1}, 300);
+
+														 	 $('#DB').removeClass("bgcolor");
                                $('.DBDesc').animate({"height": 0}, 300);
                                $('.dbPhotos').animate({"opacity": 0}, 300);
                            }
-                       
+
                       if ($(this).is($('#HDBApp')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
+                           {
+													 		$(this).addClass('bgcolor');
                                $('.HDBAppDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 365}, 300);
+
                                $('.binheximage').animate({"opacity": 1}, 300);
                                $('.arrow2').animate({"opacity": 1}, 300);
                                $('.bubb').animate({"opacity": 1}, 300);
                                $('.bubb1').animate({"opacity": 1}, 300);
                            } else {
-                               
-                               
-                               
-                               $('#HDBApp').animate({"opacity": 1}, 300);
+
+
+														 	$('#HDBApp').removeClass("bgcolor");
                                $('.HDBAppDesc').animate({"height": 0}, 300);
+
                                $('.binheximage').animate({"opacity": 0}, 300);
-                               
                                $('.arrow2').animate({"opacity": 0}, 300);
                                $('.bubb').animate({"opacity": 0}, 300);
                                $('.bubb1').animate({"opacity": 0}, 300);
                            }
-                       if ($(this).is($('#TaxCalc')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
-                               $('.TaxCalcDesc').animate({"height": 420}, 300);
-                               $('#window').animate({"height": 295}, 300);
-                               $('.taximage').animate({"opacity": 1}, 300);
-                               $('.arrow3').animate({"opacity": 1}, 300);
-                               $('.bubb2').animate({"opacity": 1}, 300);
-                           } else {
-                               $('#TaxCalc').animate({"opacity": 1}, 300);
-                               $('.TaxCalcDesc').animate({"height": 0}, 300);
-                               $('.taximage').animate({"opacity": 0}, 300);
-                               $('.arrow3').animate({"opacity": 0}, 300);
-                               $('.bubb2').animate({"opacity": 0}, 300);
-                           }
+
                        if ($(this).is($('#Cryp')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
+                           {
+													 		$(this).addClass('bgcolor');
                                $('.CrypDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 330}, 300);
                                $('.crypPhotos').animate({"opacity": 1}, 300);
                            } else {
-                               
-                               $('#Cryp').animate({"opacity": 1}, 300);
+														 		$('#Cryp').removeClass("bgcolor");
                                $('.CrypDesc').animate({"height": 0}, 300);
                                $('.crypPhotos').animate({"opacity": 0}, 300);
                            }
                        if ($(this).is($('#CSSName')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
+                           {
+                               $(this).addClass('bgcolor');
                                $('.CSSNameDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 270}, 300);
                                $('.cssimage').animate({"opacity": 1}, 300);
                            } else {
-                               
-                               $('#CSSName').animate({"opacity": 1}, 300);
+														 		$('#CSSName').removeClass("bgcolor");
                                $('.CSSNameDesc').animate({"height": 0}, 300);
                                $('.cssimage').animate({"opacity": 0}, 300);
                            }
                        if ($(this).is($('#RM')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
+                           {
+                               $(this).addClass('bgcolor');
                                $('.RMDesc').animate({"height": 420}, 300);
                                $('#window').animate({"height": 250}, 300);
                            } else {
-                               $('#RM').animate({"opacity": 1}, 300);
+														 		$('#RM').removeClass("bgcolor");
                                $('.RMDesc').animate({"height": 0}, 300);
-                               
+
                            }
                        if ($(this).is($('#MM')))
-                           { 
-                               $(this).animate({"opacity": 0.4}, 300);
-                               $('.MMDesc').animate({"height": 450}, 300);
-                               $('#window').animate({"height": 505}, 300);
+                           {
+                               $(this).addClass('bgcolor');
+                               $('.MMDesc').animate({"height": 465}, 300);
+                               $('#window').animate({"height": 465}, 300);
                                $('.mmPhotos').animate({"opacity": 1}, 300);
                            } else {
-                               $('#MM').animate({"opacity": 1}, 300);
+														 		$('#MM').removeClass("bgcolor");
                                $('.MMDesc').animate({"height": 0}, 300);
                                $('.mmPhotos').animate({"opacity": 0}, 300);
                            }
+
+											 if ($(this).is($('#TestBench')))
+													 {
+                               $(this).addClass('bgcolor');
+															 $('.TestBenchDesc').animate({"height": 515}, 300);
+															 $('#window').animate({"height": 515}, 300);
+															 // $('.mmPhotos').animate({"opacity": 1}, 300);
+													 } else {
+														 		$('#TestBench').removeClass("bgcolor");
+															 $('.TestBenchDesc').animate({"height": 0}, 300);
+															 // $('.mmPhotos').animate({"opacity": 0}, 300);
+													 }
+
+											 if ($(this).is($('#Heatmap')))
+													 {
+                               $(this).addClass('bgcolor');
+															 $('.HeatmapDesc').animate({"height": 495}, 300);
+															 $('#window').animate({"height": 555}, 300);
+															 $('.HeatmapPhotos').animate({"opacity": 1}, 300);
+													 } else {
+														 		$('#Heatmap').removeClass("bgcolor");
+															 $('.HeatmapDesc').animate({"height": 0}, 300);
+															 $('.HeatmapPhotos').animate({"opacity": 0}, 300);
+													 }
                       return this;
-                   }; 
+                   };
                 })( jQuery );
-                
+
                 //SCROLL TO APPROPRIATE SECTION FROM INTRODUCTIONS
                 (function( $ ){
                    $.fn.closeItem = function() {
                       $(this).animate({"opacity": 0}, 300);
                       return this;
-                   }; 
+                   };
                 })( jQuery );
                 // from Steve on StackOverflow https://stackoverflow.com/questions/6677035/jquery-scroll-to-element
                 $("#scroll1").click(function() {
@@ -379,24 +353,79 @@
                         scrollTop: $("#secondPage").offset().top
                     }, 400);
                 });
-                
+
                 $("#scroll2").click(function() {
                     $('html, body').animate({
                         scrollTop: $("#thirdPage").offset().top
                     }, 700);
                 });
-                
+
                 $("#scroll3").click(function() {
                     $('html, body').animate({
                         scrollTop: $("#fourthPage").offset().top
                     }, 1000);
                 });
-                
+
+								//scroll to title in experience section
+								$(".jobex").click(function() {
+										$('#infobox').animate({
+												scrollTop: $("#infobox").scrollTop() + $("#slide1").position().top -230
+										}, 700);
+								});
+
+								$(".edu").click(function() {
+										$('#infobox').animate({
+												scrollTop: $("#infobox").scrollTop() + $("#slide2").position().top -230
+										}, 700);
+								});
+
+								$(".stu").click(function() {
+										$('#infobox').animate({
+												scrollTop: $("#infobox").scrollTop() + $("#slide4").position().top -230
+										}, 700);
+								});
+
+								$(".vol").click(function() {
+										$('#infobox').animate({
+												scrollTop: $("#infobox").scrollTop() + $("#slide3").position().top -230
+										}, 700);
+								});
+
+								$(".award").click(function() {
+										$('#infobox').animate({
+												scrollTop: $("#infobox").scrollTop() + $("#slide5").position().top -230
+										}, 700);
+								});
+
+
+								$(document).ready(function(){
+									$(".jobex")['addClass']('borderChange');
+									$("#infobox").scroll(function() {
+										var slide2_pos = $("#slide2").position().top - $("#slide1").position().top-36;
+										var slide3_pos = $("#slide3").position().top - $("#slide1").position().top-36;
+										var slide4_pos = $("#slide4").position().top - $("#slide1").position().top-36;
+										var slide5_pos = $("#slide5").position().top - $("#slide1").position().top-36;
+
+									  var jobex_class = $("#infobox").scrollTop() < slide2_pos ? 'addClass' : 'removeClass';
+									  var edu_class = $("#infobox").scrollTop() < slide3_pos && $("#infobox").scrollTop() > slide2_pos ? 'addClass' : 'removeClass';
+										var vol_class = $("#infobox").scrollTop() < slide4_pos && $("#infobox").scrollTop() > slide3_pos ? 'addClass' : 'removeClass';
+										var stu_class = $("#infobox").scrollTop() < slide5_pos && $("#infobox").scrollTop() > slide4_pos  ? 'addClass' : 'removeClass';
+										var award_class = $("#infobox").scrollTop() > slide5_pos ? 'addClass' : 'removeClass';
+
+
+										$(".jobex")[jobex_class]('borderChange');
+										$(".edu")[edu_class]('borderChange');
+										$(".stu")[stu_class]('borderChange');
+										$(".vol")[vol_class]('borderChange');
+										$(".award")[award_class]('borderChange');
+
+									});
+								});
             });
-    
-            
-            
-            
+
+
+
+
 		</script>
 	</head>
 
@@ -422,9 +451,9 @@
                             <div id="point3"><p>✕</p></div>
                         </div>
                         <div id="bubbles">
-                            <div class="bubble1"><div id= "bubbleText1" style="width:398px">A second-year <i>Computer Engineering</i> student studying at the <i>University of British Columbia</i> (UBC)</div><div id="seeMore1"><div width="149px"><a>  click here to expand  </a></div></div></div>
+                            <div class="bubble1"><div id= "bubbleText1" style="width:398px">A third-year <i>Computer Engineering</i> student studying at the <i>University of British Columbia</i> (UBC)</div><div id="seeMore1"><div width="149px"><a>  click here to expand  </a></div></div></div>
 
-                            <div class="bubble2"><div id= "bubbleText2" style="width:463px">A programming enthusiast, who has experience working with <i>Java</i>, <i>C++</i>, <i>JavaScript</i>, <i>HTML</i>, <i >CSS</i>, <i>ARM Assembly</i>,and <i>Verilog</i></div><div id="seeMore2"><div width="149px"><a>  click here to expand  </a></div></div></div>
+                            <div class="bubble2"><div id= "bubbleText2" style="width:463px">A programming enthusiast who has worked with <i>Java</i>, <i>C/C++</i>, <i>Python</i>, <i>JavaScript</i>, <i>SQL</i>, <i>Assembly</i>, <i>Verilog</i>, and <i>more</i>!</div><div id="seeMore2"><div width="149px"><a>  click here to expand  </a></div></div></div>
 
                             <div class="bubble3" ><div id= "bubbleText3" style="width:327px">A <i>problem-solver</i> who <i>welcomes challenges</i> and is <i>eager to learn new concepts</i></div><div id="seeMore3"><div width="149px"><a>  click here to expand  </a></div></div></div>
                         </div>
@@ -439,7 +468,7 @@
 
                             <div id="secondMore">
                                 <div class="quote2">“</div>
-                                <div class="flipflop2"><div class="flipText">As an aspiring Computer Engineer, I am actively striving to be exposed to different platforms and interface levels. <br><div style="border-left:1px solid #d0aae0; padding-left:9px;"><a id="scroll2">Click here to see <i>some of my personal projects</i>! </a></div></div></div>
+                                <div class="flipflop2"><div class="flipText">As an aspiring Computer Engineer, I am actively striving to learn more about various languages and techniques. <br><div style="border-left:1px solid #d0aae0; padding-left:9px;"><a id="scroll2">Click here to see <i>some of my personal projects</i>! </a></div></div></div>
                                 <div class="lineOut12"></div>
                                 <div class="lineOut22"></div>
                                 <div class="lineOut32"></div>
@@ -462,67 +491,95 @@
             <div id="title2"><h2 style="
     background-color:#fff;">Education</h2> <div id="plus">+</div> <h2 style="display:inline-block;padding-left:10px;top:-55px; position:relative;
                 background-color:#fff;">Experience</h2><div id="triAfter"></div></div>
-            
+
             <div id="infobox">
                 <div id="slidePos">
                 <div id="slide1">
                     <h2>Job Experience</h2>
                     <h3>Technical Work Experience</h3>
-                   
-                    <div id="titleItem1">SaskTel</div>
-                   <div id="titleItem2">Summer 2017</div><div id="titleItem3">Customer Service Technician</div>
-                     <ul class="pointItems1">
-                        <li>Provided efficient internet technical support for customers.</li>
-                        <li>Walked customers through troubleshooting on the phone in a timely manner.</li>
-                        <li>Empathized with distressed customers and brought upon an environment of understanding.</li>
-                    </ul>
-                    <div style="height:20px"></div>
-                    <h3>non-Technical Work Experience</h3>
-                   
-                    <div id="titleItem1">Best Buy</div>
-                   <div id="titleItem2">Summer 2016</div><div id="titleItem32">Connected Solutions Sales Associate</div>
-                     <ul class="pointItems2">
-                        <li>Combined an understanding of customer needs and knowledge about consumer electronics to give informative suggestions.</li>
-                        <li>Strived to learn more about the store's products and today's technology to become a more knowledgable salesperson.</li>
-                    </ul>
-                    
-                     <div style="height:10px;border-bottom:1px solid #ddd;margin-bottom:30px;"></div>
-                   
-                    <div id="titleItem13">Home Outfitters</div>
-                   <div id="titleItem23">Summer 2016</div><div id="titleItem33">Guest Services Associate</div>
-                     <ul class="pointItems3">
-                        <li>Responsibly managed money-related transactions</li>
-                        <li>Efficiently multitalked between handling customer inquiries on phone calls, checking out items, and conducting returns.</li>
-                    </ul>
-                    </div>
+										<div class="titleItem14 titleItem1_styles">Rogers <br>Communications</div><br>
+                   <div class="titleItem24 titleItem2_styles">Summer 2018</div><br>
+									 <div class="titleItem34 titleItem3_styles">Project Coordinator <br>Co-op</div>
+                   <ul class="pointItems4 pointItems_styles">
+                      <li>Optimized and repaired the interface and functionality of a Microsoft Access database with VBA and SQL, completing multiple improvements per week.</li>
+                      <li>Programmed macros in MS Excel to automate repetitive tasks, allowing the team to address critical issues earlier.</li>
+                      <li>Designed scripts for querying fields, validating data, and uploading large amounts of information at once.</li>
+                  </ul>
+
+									<div style="height:10px;border-bottom:1px solid #ddd;margin-bottom:30px;"></div>
+                  <div class="titleItem1 titleItem1_styles">SaskTel</div>
+                  <div class="titleItem2 titleItem2_styles">Summer 2017</div><br>
+									<div class="titleItem3 titleItem3_styles">Customer Service Technician</div>
+                  <ul class="pointItems1 pointItems_styles">
+                      <li>Provided efficient internet technical support for customers.</li>
+                      <li>Walked customers through troubleshooting on the phone in a timely manner.</li>
+                      <li>Empathized with customers and brought upon an environment of understanding.</li>
+                  </ul>
+                  <div style="height:20px"></div>
+                  <h3>non-Technical Work Experience</h3>
+
+                  <div class="titleItem1 titleItem1_styles">Best Buy</div>
+                  <div class="titleItem2 titleItem2_styles">Summer 2016</div><br>
+									<div class="titleItem32 titleItem3_styles">Connected Solutions Sales Associate</div>
+                  <ul class="pointItems2 pointItems_styles">
+                      <li>Combined an understanding of customer needs and knowledge about consumer electronics to give informative suggestions.</li>
+                      <li>Strived to learn more about the store's products and today's technology to become a more knowledgable salesperson.</li>
+                  </ul>
+
+                  <div style="height:10px;border-bottom:1px solid #ddd;margin-bottom:30px;"></div>
+
+                  <div class="titleItem13 titleItem1_styles">Home Outfitters</div><br>
+                  <div class="titleItem23 titleItem2_styles">Summer 2016</div><div class="titleItem33 titleItem3_styles">Guest Services Associate</div>
+                  <ul class="pointItems3 pointItems_styles">
+                      <li>Responsibly managed money-related transactions</li>
+                      <li>Efficiently multitalked between handling customer inquiries on phone calls, checking out items, and conducting returns.</li>
+                  </ul>
+                </div>
                 <div id="slide2">
-                <h3>Education</h3>
+                <h3 id="wah">Education</h3>
                     <div class="school">
-                    <div id="titleItem1">University of British Columbia</div>
-                    <div id="titleItem2">B.ASc. Computer Engineering</div>
-                    <div id="titleItem3">» Second-year transfer, started September 2017
-                    <br/>» Expected Graduation: 2021</div>
-                        </div>
-                    <div class="school">
-                    <div id="titleItem1">University of Regina</div>
-                    <div id="titleItem2">B.ASc. Software Systems Engineering</div>
-                    <div id="titleItem3">» Completed first year<br/>» September 2016- May 2017
+	                    <div id="titleItem1">University of British Columbia</div>
+	                    <div id="titleItem2">B.ASc. Computer Engineering</div>
+	                    <div id="titleItem3">» Second-year transfer, started September 2017
+	                    <br/>» Expected Graduation: 2022</div>
                     </div>
-                        </div>
+                    <div class="school">
+	                    <div id="titleItem1">University of Regina</div>
+	                    <div id="titleItem2">B.ASc. Software Systems Engineering</div>
+	                    <div id="titleItem3">» Completed first year<br/>» September 2016- May 2017</div>
+                    </div>
                 </div>
+
                 <div id="slide3">
-                    <h3>Volunteer Experience</h3>
-                    <div id="titleItem1">Regina Engineering Student Society (RESS)</div>
-                    <div id="titleItem2">Visual Media Director</div>
-                    <div id="titleItem3">(September 2016 - May 2017)</div>
-                     <ul class="pointItems">
-                        <li>Designed and created attention-grabbing posters to help market RESS events.</li>
-                         <li>Ensured that the society's social media visuals looked professional and enthralling.</li>
-                        <li>Committed to attending weekly meetings to stay updated on plans within the society.</li>
-                    </ul>
+										<h2>Volunteer Experience</h2>
+										<div id="titleItem1">Institute of Electrical and Electronics Engineers (IEEE) UBC</div>
+										<div id="titleItem2">Advertisement and Recruitment Executive</div>
+										<div id="titleItem3">(June 2018 - present)</div>
+										 <ul class="pointItems">
+												<li>Designed enthralling advertising graphics to enforce strong visual branding for the branch.</li>
+												 <li>Communicated with team members to keep the IEEE UBC social media updated.</li>
+												<li>Attended monthly meetings, committing time to stay updated on IEEE activities.</li>
+										</ul>
                 </div>
-                <div id="slide4">
-                    <h3>Awards</h3>
+								<div id="slide4">
+								<h2>Engineering Student Teams</h2>
+										<div class="EST">
+
+											<h3>
+												 <span class="arr">»</span>
+												 <span style="font-size:45px;text-transform:uppercase;font-family:calibri;color:#ccc;font-weight:bold">UBC</span> <i style="letter-spacing:4px">Sailbots</i>
+											</h3>
+											<ul>
+												<li>Contributed to the construction of an automated sailboat, with the objective to send it across the Atlantic Ocean</li>
+												<li>Applied external parsing libraries to interpret weather data from GRIB-formatted files</li>
+												<li>Committed to a weekly meeting schedule for team updates and group work</li>
+												<li>Worked alongside a multi-disciplinary team, including a variety of software, electrical and mechanical engineering students</li>
+											</ul>
+
+										</div>
+								</div>
+                <div id="slide5">
+                    <h2>Awards</h2>
                     <div id="titleItem">Norman A M MacKenzie Scholarship</div>
                     <div id="descItem"><span class="arr">»</span><div class="awTo">Awarded to:</div> Nine University of British Columbia transfer students.</div>
                     <div id="titleItem">University of Regina Academic Gold Scholarship</div>
@@ -533,69 +590,103 @@
                     <div id="descItem"><span class="arr">»</span><div class="awTo">Awarded to:</div> Students with a university entrance average above 95%.</div>
                     </div>
             </div>
-            
-            <div id="lineGroup"><div class="change1">[Job Experience]</div><div class="change2">[Education]</div><div class="change3">[Volunteering]</div><div class="change4">[Awards]</div></div><div class="title2">select what you want to read about</div>
-                
-            </div><div class="movDot"></div>
+
+						<div id="experience_labels">
+							<div class="label jobex">Job Experience</div><br>
+							<div class="label edu">Education</div><br>
+							<div class="label vol">Volunteering</div><br>
+							<div class="label stu">Engineering Student Teams</div><br>
+							<div class="label award">Awards</div>
+						</div>
+            </div>
         </div>
-        
+
         <div id="thirdPage">
             <h2 class="t21">Personal</h2> <h2 class="t22">Projects</h2>
+						<div class="projectList">
+								<ol>
+										<li id="Heatmap">Business Locator Heatmap</li>
+										<li id="TestBench">TestBench App</li>
+										<li id="HDBApp">Hexidecimal, Binary, and Decimal Converter App</li>
+										<li id="MM">MeeTMinus (@NWHacks)</li>
+									 	<li id="DB">Basic Server Database</li>
+										<li id="Cryp">Cryptarithm Solver</li>
+										<li id="CSSName">CSS Name Animation</li>
+										<li id="MultGame">Multiplication Game</li>
+										<li id="RM">Simple RISC Machine </li>
+
+								</ol>
+						</div>
             <div class="boxCode">
-                <div class="projectList">
-                    <ol>
-                        <li><span id="HDBApp">Hexidecimal, Binary, and Decimal Converter App</span></li>
-                        <li><span id="MM">MeeTMinus (@NWHacks)</span></li>
-                       <li><span id="DB">Basic Server Database</span></li>
-                        <li><span id="Cryp">Cryptarithm Solver</span></li>
-                        <li><span id="TaxCalc">Tax Calculator</span></li>
-                        <li><span id="CSSName">CSS Name Animation</span></li>
-                        <li><span id="FAQSite">FAQ Site</span></li>
-                        <li><span id="MultGame">Multiplication Game</span></li>
-                        <li><span id="RM">Simple RISC Machine </span></li>
-                    
-                    
-                    
-                    </ol>
-                </div>
+
                 <div class="code">
                 <cp>public class</cp> <co>ViewProjects</co> {<br>
-                    
+
                     <div class="tabSpace">  </div><cp>static public void</cp> <cb>main</cb>(<cp>String[]</cp> <cr>args</cr>) {<br>
                     <div class="tabSpace">  </div><div class="tabSpace"></div><cr>System</cr>.<cr>out</cr>.<cb>print</cb>(<cg>"CLICK ON A PROJECT TO SHOW"</cg>);<br>
                     <div class="tabSpace">  </div><div class="tabSpace"></div><cp>WebWindow</cp> <cr>window</cr> = <cp>new</cp> <cb>WebWindow</cb>(<cr><div style="display:inline-block" id="projectTitle"></div></cr>);<br>
                     <div class="tabSpace">  </div><div class="tabSpace"></div><cr>window</cr>.<cb>open()</cb>;<br>
                     <div class="tabSpace">  </div>}<br>
-                    
-                    
+
+
                 }
                 </div>
+
             </div>
             <div id="window">
                 <div id="windowTop"><div style="border:1px solid #ddd;display:inline-block;padding:0px 4px 2px 4px;">-</div> <div style="border:1px solid #ddd;display:inline-block;padding:0px 4px 2px 4px;">x</div></div>
                 <div id="windowContent">
                     <div class="innerContent">
                         <div class="introWrap"><div class="introText">Click on a project on the left bar to get started!</div></div>
-                        <div class="HDBAppDesc">
+
+												<div class="HeatmapDesc">
+	                            <h3>Business Locator Heatmap</h3>
+															This application will tell you <u>where businesses of various categories</u> are <u>concentrated at different locations</u>.
+															The application uses the <u>Yelp Fusion REST API</u> to retrieve the locations, in addition to <u>Pandas</u> and <u>Folium</u> to create the heatmap and location markers from the data.<br><br>
+															It outputs the following:
+															<ul>
+																<li>An <u>web-based interactive map</u> showing <u>concentrations of businesses</u> across the area, in addition to options for labeled <u>location markers</u> on the map and <u>heavier weight for higher-rated businesses</u>.
+																</li>
+															<li>A <u>CSV file</u> that shows the shops and corresponding locations that are used by the map.</li>
+															</ul>
+	                        <div class="links">
+	                            <a href="https://github.com/andreamah/Business-Locator-Heatmap">GitHub link</a>
+                        	</div>
+												</div>
+												<div class="TestBenchDesc">
+	                            <h3>TestBench App</h3>
+	                            <!-- This Android app is a real-time quiz-battle game that allows UBC students to practice course material! Students can compete with their classmates in multi-question games, gain experience, and rank up. -->
+															<!-- Within the games, students are awarded points based on whether they answer questions before their opponent and how quickly they answer. The app also include functionality for course leaderboards, statistics, user profiles, and question submission. -->
+
+															I worked on a four-person team to build a <u>one-on-one quiz battle app</u> that asks questions regarding UBC course material.<br><br>
+															In the game, users can <u>start a game in any subject</u>, and the app will <u>find them an opponent</u>. Players receive based on who answers the question correctly first and how fast they answer.<br>
+															It also include functionality for <u>course leaderboards</u>, <u>game statistics</u>, <u>user profiles</u>, and <u>question submission</u>. <br><br>
+															Our objective for this game was to encourage students to <u>practice course material</u>, while also <u>having fun</u>!
+
+
+	                        <div class="links">
+	                            <a href="https://github.com/andreamah/cpen321-project">GitHub link</a>
+	                        </div>
+                        </div>
+												<div class="HDBAppDesc">
                             <h3>Heximal</h3>
                             This is an app that <u>converts values between Hexadecimal, Decimal, and Binary!</u> I was inspired by my CPEN 211 class, which required extensive conversions between the three formats. To add, I implemented a <u>history function</u> that will display the last 8 queries. I also learned how to implement animations in the Android API in order to make this app look a little nicer :)
                         <div class="links">
                             <a href="https://github.com/andreamah/Heximal">GitHub link</a>
-                        </div>    
+                        </div>
                         </div>
                         <div class="MMDesc">
                             <h3>MeeTMinus</h3>
                         I participated at <u>NWHacks 2018</u>, where I worked with a team of great people in order to implement MeeTMinus. <br>
                             It helps those who, for example, need to <u>text somebody when they are picking them up and are nearby.</u><br>
-                            
+
                         It uses the RightMesh API in order to locate the user and <u>automatically sends a text when someone is nearby a location without Wifi or cell service.</u><br>
                         Unfortunately, we couldn't finish it in time for the deadline, but hopefully, we will pick it up again!
-                        
+
                         <div class="links">
-                        <a href="https://github.com/allison98/MeMinus">GitHub link</a>
-                        <a href="https://devpost.com/software/meminus">DevPost link</a>
-                        <a href="http://meet-minus.com/">Website</a>
-                        </div>   
+	                        <a href="https://github.com/allison98/MeMinus">GitHub link</a>
+	                        <a href="https://devpost.com/software/meminus">DevPost link</a>
+                        </div>
                         </div>
                         <div class="DBDesc">
                             <h3>Yelp Database</h3>
@@ -609,60 +700,65 @@
                             <h3>Cryptarithm Solver</h3>
 
                         If you do not know what a cryptarithm is, <a href="http://www.cryptarithms.com/">click here</a>! <br>
-                            For my CPEN 221 course, one of the machine problems prompted us to create a <u>cryptarithm solver</u>.  It does not only take <u>addition</u>, but <u>subtraciton</u>, <u>division</u>, and <u>multiplication</u> also!  
-                        </div> 
+                            For my CPEN 221 course, one of the machine problems prompted us to create a <u>cryptarithm solver</u>.  It does not only take <u>addition</u>, but <u>subtraciton</u>, <u>division</u>, and <u>multiplication</u> also!
+                        </div>
 
                         <div class="TaxCalcDesc">
                             <h3>Tax Calculator</h3>
 
                             The first app that I made was around boxing day, so I decided to give myself a <u>handy tool</u> to calculate the <u>sale prices including tax</u>! Looking back at it, I would definitely make some changes if I had the time! (note: tax is according to BC tax value)
-                            
+
                         <div class="links">
                             <a href="https://github.com/andreamah/TaxCalculator">GitHub link</a>
                         </div>
-                        </div>   
+                        </div>
                         <div class="CSSNameDesc">
                             <h3>CSS My Name!</h3>
 
-                        I made a fun little <u>animation of my name</u> using <u>CSS</u> hover animations from scratch :) 
+                        I made a fun little <u>animation of my name</u> using <u>CSS</u> hover animations from scratch :)
                             <div class="links">
                             <a href="https://andreamah.github.io/cssmyname/">Preview link</a>
                             <a href="https://github.com/andreamah/cssmyname">GitHub link</a>
                         </div>
                         </div>
-                            
+
                         <div class="FAQSiteDesc">
                             <h3>FAQ Site</h3>
                             In high school, I had a bit of fun making a <u>lighthearted website</u> that listed and answered some of the most <u>interesting questions</u> that I could find on the internet! I used <u>CSS animations</u>, in addition to <u>JQuery</u> to make it.
-                            
+
                         <div class="links">
                             <a href="https://andreamah.github.io/FAQSite/">Preview link</a>
                             <a href="https://github.com/andreamah/FAQSite">GitHub link</a>
-                        </div>  
+                        </div>
                         </div>
                         <div class="MultGameDesc">
                             <h3>Multiplication Game</h3>
                         In my first year of university, I coded a <u>multiplication game in the C++ console</u>. Once the player picks their preferred difficulty level, it <u>cumulatively keeps track of score</u> during the game. Then, it <u>prints out the questions and scores in a log file</u> at the end of the game. I also included an extra file that kept a log of the players.
                         </div>
-                        
+
                         <div class="RMDesc">
                             <h3>Simple RISC Machine</h3>
 
                         In my CPEN 211 (Introduction to Microcomputers) course, I worked with my lab partner to make a compiler that <u>took binary encodings translated from ARM Assembly</u>. It <u>performed the different operations that were specified in the ARM code </u>(ie: simple math).
                         </div>
-                                
+
                     </div>
                 </div>
             </div>
-            <div class="crypPhotos">
-                            <img class="crypimage" width="582px" src="./ProfileFiles/crypt.PNG"/>
+
+						<div class="HeatmapPhotos">
+                  	<img class="Heatmapimage" width="480px" src="./ProfileFiles/location_label_example.gif"/>
             </div>
-            
+
+            <div class="crypPhotos">
+                  	<img class="crypimage" width="582px" src="./ProfileFiles/crypt.PNG"/>
+            </div>
+
             <div class="binhexPhotos">
                     <img class="binheximage" width="182px" src="./ProfileFiles/binhexadec.gif"/>
-                
+
                 <div class="ar">
-                    
+
                     <div class="arrow2"></div>
                     <div class="bubb"></div>
                     <div class="bubb1"></div>
@@ -671,17 +767,17 @@
             <div class="dbPhotos">
                     <img class="dbimage" width="582px" src="./ProfileFiles/db.PNG"/>
             </div>
-            
+
             <div class="mmPhotos">
                     <img class="mmimage1" width="182px" src="./ProfileFiles/meetminus.png"/>
                     <img class="mmimage2" width="182px" src="./ProfileFiles/meetminus2.png"/>
             </div>
             <div class="taxPhotos">
                             <img class="taximage" width="182px" src="./ProfileFiles/taxcalc2.gif"/>
-                
+
                     <div class="arrow3"></div>
                     <div class="bubb2"></div>
-                
+
             </div>
             <div class="cssnamePhotos">
                             <img class="cssimage" width="382px" src="./ProfileFiles/cssmyname.gif"/>
@@ -691,25 +787,25 @@
             </div>
             <div class="multPhotos">
                             <img class="multimage1" width="382px" src="./ProfileFiles/MultGame.gif">
-                        <img class="multimage2" width="400px" src="./ProfileFiles/LogFile.png"> 
-                            
+                        <img class="multimage2" width="400px" src="./ProfileFiles/LogFile.png">
+
                         <img class="multimage3" width="382px" src="./ProfileFiles/logrecord.PNG">
             </div>
         </div>
-        
+
         <div id="fourthPage">
             <h2>Find Me Elsewhere</h2>
             <div class="elsewhere">Learn more about me, as a future Computer Engineer!</div>
             <div class="where">GitHub: </div><div class="user"><a href="https://github.com/andreamah">@andreamah</a></div><br/>
             <div class="where">LinkedIn: </div><div class="user"><a href="https://www.linkedin.com/in/andrea-mah-b85710147/">Andrea Mah</a></div>
-            
+
             <div class="abt"><h3>About This Page</h3></div>
-            
+
             <div class="pagedesc"><div class="leftbrac">{</div>
-                I coded and designed this page from scratch (no template) using <u>HTML</u>, <u>CSS</u>, <u>JavaScript</u>, and <u>JQuery</u>. This page works best on <u>Google Chrome</u> with screen resolution of at least <u>2160x1440</u>. Unfortunately, I have not yet optimized it for mobile users. It took a while to do, but I hope you enjoyed! 
+                I coded and designed this page from scratch (no template) using <u>HTML</u>, <u>CSS</u>, <u>JavaScript</u>, and <u>JQuery</u>. This page works best on <u>Google Chrome</u> with screen resolution of at least <u>2160x1440</u>. Unfortunately, I have not yet optimized it for mobile users. It took a while to do, but I hope you enjoyed!
                 <div class="rightbrac">}</div>
             </div>
-            
+
         </div>
 	</body>
 </html>
